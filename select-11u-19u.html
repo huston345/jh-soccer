@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            max-width: 600px; /* Optional: set a max-width to avoid it becoming too large */
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -61,7 +70,6 @@
             <h3>Proud Partner of Iowa United Football Club</h3>
             <img src="https://raw.githubusercontent.com/huston345/jh-soccer/master/IUFC.png" alt="Iowa United Soccer Club Logo" class="responsive-img">
         </section>
-
         <section id="select-11u-19u" class="content-section">
             <h2>Select Program (Ages 11-19)</h2>
             <p>Welcome to our Select program, part of the prestigious Iowa United Soccer Club. Our select program is dedicated to developing elite soccer players through advanced training and competitive play. We focus on enhancing technical skills, tactical understanding, and physical fitness, ensuring each player reaches their full potential. Our players compete in top-tier leagues and tournaments, representing the highest standards of excellence and sportsmanship. Join us to experience elite soccer development in a supportive and challenging environment.</p>
@@ -84,40 +92,35 @@
             <h3>League Games & Tournaments</h3>
             <p>Select teams participate in the Iowa Soccer League and various prestigious tournaments throughout the year. Our focus is on competitive success while maintaining the highest standards of sportsmanship and team spirit.</p>
 
-<h3>Join Our Elite Program</h3>
-<p>If you are ready to take your game to the next level, we invite you to join our Select program. Experience the benefits of elite soccer development and become part of the Iowa United Soccer Club legacy.</p>
-<a href="https://playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS02MDYtMTY5MzE0MzAyM3xKVmtxTGlBT3hJRUVlQjZPa2gvUU5nZ2VlcTFpWG55VEwxSVVIOXJMcnA0PQ%3D%3D" class="cta-button" target="_blank">Register to Tryout Now <i class="fas fa-arrow-right"></i></a>
-</section>
+            <h3>Join Our Elite Program</h3>
+            <p>If you are ready to take your game to the next level, we invite you to join our Select program. Experience the benefits of elite soccer development and become part of the Iowa United Soccer Club legacy.</p>
+            <a href="https://playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS02MDYtMTY5MzE0MzAyM3xKVmtxTGlBT3hJRUVlQjZPa2gvUU5nZ2VlcTFpWG55VEwxSVVIOXJMcnA0PQ%3D%3D" class="cta-button" target="_blank">Register to Tryout Now <i class="fas fa-arrow-right"></i></a>
+        </section>
 
-<section id="countdown">
-    <h3>Countdown to Tryouts</h3>
-    <div id="countdown-timer"></div>
-    <script>
-        // Countdown timer script
-        const countdownDate = new Date("Jun 15, 2024 09:00:00").getTime();
-        const countdownFunction = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+        <section id="countdown">
+            <h3>Countdown to Tryouts</h3>
+            <div id="countdown-timer"></div>
+            <script>
+                // Countdown timer script
+                const countdownDate = new Date("Jun 15, 2024 09:00:00").getTime();
+                const countdownFunction = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = countdownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+                    document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h "
++ minutes + "m " + seconds + "s ";
 
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-</section>
-
-<section id="iowa-united">
-    <h3>Proud Partner of Iowa United Football Club</h3>
-    <img src="https://raw.githubusercontent.com/huston345/jh-soccer/master/IUFC.png" alt="Iowa United Soccer Club Logo" class="responsive-img">
+if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+}
+}, 1000);
+</script>
 </section>
 </main>
 <footer class="footer">
