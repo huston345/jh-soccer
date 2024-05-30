@@ -263,16 +263,24 @@ section h1, section h2 {
 }
 
 .tile .cta-button {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px; /* Reduce padding for a smaller button */
     background-color: #fff;
     color: #004080;
     text-align: center;
-    padding: 10px;
-    margin: 10px;
+    margin: 10px auto; /* Center the button horizontally */
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px; /* Adjust font size for a smaller button */
     transition: background-color 0.3s;
+}
+
+.tile .cta-button i {
+    margin-left: 5px; /* Adjust margin for the icon */
+    font-size: 14px; /* Adjust icon size */
 }
 
 .tile .cta-button:hover {
@@ -313,7 +321,7 @@ section h1, section h2 {
     margin: 5px 0;
 }
 
-/* Styles for Contact Us Section *//* Styles for Contact Us Section */
+/* Styles for Contact Us Section */
 #contact {
     background-color: #fff;
     padding: 20px;
@@ -363,7 +371,6 @@ section h1, section h2 {
 }
 
 /* Styles for Partners Section */
-/* Styles for Partners Section */
 #partners {
     background-color: #fff;
     padding: 20px;
@@ -388,7 +395,6 @@ section h1, section h2 {
     transform: scale(1.05);
 }
 
-/* Footer Styles */
 /* Footer Styles */
 footer {
     background-color: #004080; /* Slightly lighter blue for better contrast */
@@ -440,6 +446,7 @@ footer {
 .footer-social-icons a:hover {
     color: #ffcc00; /* Add hover effect */
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -480,7 +487,7 @@ footer {
     .partners-container {
         flex-direction: column;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
