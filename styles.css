@@ -371,6 +371,7 @@ section h1, section h2 {
 }
 
 /* Styles for Partners Section */
+/* Styles for Partners Section */
 #partners {
     background-color: #fff;
     padding: 20px;
@@ -514,8 +515,12 @@ footer {
     }
 
     .cta-button {
-        width: 100%;
+        width: 80%; /* Adjust button width */
+        padding: 10px 0; /* Adjust padding for height */
+        font-size: 14px; /* Adjust font size */
         text-align: center;
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Ensure it's a block element to center properly */
     }
 
     .tile {
