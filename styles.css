@@ -408,6 +408,10 @@ footer {
     gap: 15px;
 }
 
+.footer-nav-item {
+    list-style: none;
+}
+
 .footer-nav-item a {
     color: #ffffff;
     text-decoration: none;
@@ -549,7 +553,7 @@ footer {
     }
 
     .tile .cta-button {
-        font-size: 14px.
+        font-size: 14px;
     }
 
     .event h3 {
@@ -557,7 +561,7 @@ footer {
     }
 
     .event p {
-        font-size: 0.9em.
+        font-size: 0.9em;
     }
 
     .contact-form input,
