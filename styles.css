@@ -145,11 +145,12 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat top center/cover;
+    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center/cover;
     color: #ffffff;
     text-align: center;
     padding: 150px 20px;
-    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-section::before {
@@ -221,7 +222,6 @@ section h1, section h2 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center;
 }
 
 /* Tiles Container Styles */
