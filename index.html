@@ -135,7 +135,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
 
@@ -143,6 +143,7 @@
         document.querySelector('.hamburger-menu').addEventListener('click', () => {
             document.querySelector('.nav-list').classList.toggle('open');
         });
-    </script>
-</body>
-</html>
+
+        // Add footer dynamically
+        const footer = document.getElementById('footer');
+        footer
