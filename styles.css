@@ -371,7 +371,6 @@ section h1, section h2 {
 }
 
 /* Styles for Partners Section */
-/* Styles for Partners Section */
 #partners {
     background-color: #fff;
     padding: 20px;
@@ -448,7 +447,20 @@ footer {
     color: #ffcc00; /* Add hover effect */
 }
 
-/* Responsive Design */
+/* Content Section Styles */
+.content-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.questions p, .program-details p {
+    margin: 5px 0;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
