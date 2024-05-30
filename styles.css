@@ -46,7 +46,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px; /* Made the logo slightly larger */
 }
 
 .nav-search {
@@ -78,10 +78,12 @@ body {
     font-size: 16px;
     padding: 10px 15px;
     display: block;
+    transition: background-color 0.3s, color 0.3s; /* Added transition for hover effect */
 }
 
 .nav-item a:hover {
     background-color: #0073e6;
+    color: #ffcc00; /* Added hover effect for links */
     border-radius: 4px;
 }
 
@@ -104,6 +106,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: #0073e6;
+    color: #ffcc00; /* Added hover effect for dropdown links */
 }
 
 .dropdown:hover .dropdown-content {
@@ -179,7 +182,8 @@ body {
     margin: 0;
     position: relative;
     z-index: 2;
-    color: #ff0000;
+    color: #ffcc00; /* Changed to a softer color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow effect */
 }
 
 .hero-section p {
@@ -188,6 +192,7 @@ body {
     position: relative;
     z-index: 2;
     color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added shadow effect */
 }
 
 .cta-button {
@@ -246,12 +251,14 @@ section h1, section h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 15px; /* Added padding to text */
 }
 
 .tile img {
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 10px; /* Added margin to separate text from image */
 }
 
 .tile h3 {
@@ -351,6 +358,11 @@ section h1, section h2 {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #0073e6;
@@ -370,6 +382,7 @@ section h1, section h2 {
 
 .contact-form button:hover {
     background-color: #005bb5;
+    color: #ffcc00; /* Added hover effect */
 }
 
 /* Styles for Partners Section */
@@ -387,14 +400,15 @@ section h1, section h2 {
 }
 
 .partners-container a img {
-    width: auto;
+    width: 150px;
     height: 100px;
     object-fit: contain;
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s; /* Added hover effect */
 }
 
 .partners-container a img:hover {
     transform: scale(1.05);
+    filter: brightness(1.2); /* Added hover effect */
 }
 
 /* Footer Styles */
