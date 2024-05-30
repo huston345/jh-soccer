@@ -10,6 +10,11 @@
 </head>
 <body>
     <header class="header">
+        <div class="banner">
+            <a href="tryouts.html" class="banner-link">
+                <img src="https://github.com/huston345/jh-soccer/blob/master/rec.jpg" alt="Tryouts Banner">
+            </a>
+        </div>
         <div class="navbar">
             <div class="logo">
                 <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Logo" /></a>
@@ -18,32 +23,35 @@
                 <input type="text" placeholder="Search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-list">
-                <li class="nav-item"><a href="index.html#home" target="_blank">Home</a></li>
+                <li class="nav-item"><a href="index.html#home">Home</a></li>
                 <li class="pipe">|</li>
-                <li class="nav-item"><a href="tryouts.html" target="_blank">Tryouts</a></li>
+                <li class="nav-item"><a href="tryouts.html">Tryouts</a></li>
                 <li class="pipe">|</li>
-                <li class="nav-item"><a href="index.html#apparel" target="_blank">Apparel</a></li>
+                <li class="nav-item"><a href="index.html#apparel">Apparel</a></li>
                 <li class="pipe">|</li>
                 <li class="nav-item dropdown">
                     <a href="index.html#programs" class="dropbtn">Programs</a>
                     <div class="dropdown-content">
-                        <a href="recreational-4u-8u.html" target="_blank">Recreational 4U - 8U</a>
-                        <a href="recreational-9u-16u.html" target="_blank">Recreational 9U - 16U</a>
-                        <a href="academy-9u-10u.html" target="_blank">Academy 9U - 10U</a>
-                        <a href="select-11u-19u.html" target="_blank">Select 11U - 19U</a>
+                        <a href="recreational-4u-8u.html">Recreational 4U - 8U</a>
+                        <a href="recreational-9u-16u.html">Recreational 9U - 16U</a>
+                        <a href="academy-9u-10u.html">Academy 9U - 10U</a>
+                        <a href="select-11u-19u.html">Select 11U - 19U</a>
                     </div>
                 </li>
                 <li class="pipe">|</li>
                 <li class="nav-item dropdown">
                     <a href="about-us.html" class="dropbtn">About Us</a>
                     <div class="dropdown-content">
-                        <a href="field-information.html" target="_blank">Field Information</a>
-                        <a href="club-volunteers.html" target="_blank">Club Volunteers</a>
+                        <a href="field-information.html">Field Information</a>
+                        <a href="club-volunteers.html">Club Volunteers</a>
                     </div>
                 </li>
                 <li class="pipe">|</li>
-                <li class="nav-item"><a href="index.html#contact" target="_blank">Contact</a></li>
+                <li class="nav-item"><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="social-icons">
                 <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -51,8 +59,8 @@
             </div>
         </div>
     </header>
-    <main>
-        <section id="academy-9u-10u">
+    <main class="container">
+        <section id="academy-9u-10u" class="content-section">
             <h2>Academy Program (Ages 9-10)</h2>
             <p>Welcome to our Academy 9U - 10U program! This program bridges the gap between recreational and select soccer, introducing players to a more competitive level of play while fostering their individual growth.</p>
             
@@ -97,5 +105,11 @@
     <footer>
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

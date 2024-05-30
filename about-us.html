@@ -10,6 +10,11 @@
 </head>
 <body>
     <header class="header">
+        <div class="banner">
+            <a href="tryouts.html" class="banner-link">
+                LEARN MORE: Iowa United Football Club: SELECT TRYOUT INFORMATION 2024/2025 SEASON
+            </a>
+        </div>
         <div class="navbar">
             <div class="logo">
                 <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Logo" /></a>
@@ -17,6 +22,9 @@
             <div class="nav-search">
                 <input type="text" placeholder="Search">
                 <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html#home">Home</a></li>
@@ -46,32 +54,40 @@
                 <li class="nav-item"><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="social-icons">
-                <a href="https://www.facebook.com/JHawkSoccer"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/JHawkSoccer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/JHawkSoccer" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </header>
-    <main>
-        <section id="about-us">
-            <h2>About Us</h2>
-            <h3>Our Mission</h3>
-            <p>At J-Hawk Soccer Club, our mission is to foster a love for soccer in our community through inclusive, high-quality training programs. We are committed to developing both the skills and character of our players by providing a supportive and competitive environment that promotes teamwork, respect, and a passion for the game.</p>
-            
-            <h3>Our Values</h3>
-            <p>We believe in creating an inclusive environment where players of all levels can thrive. Our core values include:</p>
-            <ul>
-                <li><strong>Teamwork:</strong> Encouraging collaboration and unity on and off the field.</li>
-                <li><strong>Respect:</strong> Promoting respect for teammates, opponents, coaches, and the game.</li>
-                <li><strong>Excellence:</strong> Striving for excellence in every aspect of the sport.</li>
-                <li><strong>Passion:</strong> Cultivating a love for the game in every player.</li>
-            </ul>
-            
-            <h3>Premier Soccer Development</h3>
-            <p>J-Hawk Soccer Club is a premier soccer club offering programs for players from beginners to advanced levels. Our comprehensive programs are designed to cater to the needs of all players, ensuring they have the opportunity to develop their skills and compete at the highest levels. From recreational leagues to competitive select teams, we provide a pathway for every player to achieve their soccer goals.</p>
+    <main class="container">
+        <section id="about-us" class="content-section">
+            <div class="content">
+                <h2>About Us</h2>
+                <h3>Our Mission</h3>
+                <p>At J-Hawk Soccer Club, our mission is to foster a love for soccer in our community through inclusive, high-quality training programs. We are committed to developing both the skills and character of our players by providing a supportive and competitive environment that promotes teamwork, respect, and a passion for the game.</p>
+                
+                <h3>Our Values</h3>
+                <p>We believe in creating an inclusive environment where players of all levels can thrive. Our core values include:</p>
+                <ul>
+                    <li><strong>Teamwork:</strong> Encouraging collaboration and unity on and off the field.</li>
+                    <li><strong>Respect:</strong> Promoting respect for teammates, opponents, coaches, and the game.</li>
+                    <li><strong>Excellence:</strong> Striving for excellence in every aspect of the sport.</li>
+                    <li><strong>Passion:</strong> Cultivating a love for the game in every player.</li>
+                </ul>
+                
+                <h3>Premier Soccer Development</h3>
+                <p>J-Hawk Soccer Club is a premier soccer club offering programs for players from beginners to advanced levels. Our comprehensive programs are designed to cater to the needs of all players, ensuring they have the opportunity to develop their skills and compete at the highest levels. From recreational leagues to competitive select teams, we provide a pathway for every player to achieve their soccer goals.</p>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

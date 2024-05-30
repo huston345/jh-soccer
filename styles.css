@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .header {
@@ -34,11 +35,6 @@ body {
     color: #ffcc00; /* Gold color for hover effect */
 }
 
-.border-line {
-    border-bottom: 2px solid;
-    background: linear-gradient(to right, #004080, #002b5c); /* Gradient between two shades of blue */
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,29 +49,7 @@ body {
 }
 
 .nav-search {
-    display: flex;
-    align-items: center;
-}
-
-.nav-search input[type="text"] {
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px 0 0 20px;
-    outline: none;
-}
-
-.nav-search button {
-    padding: 5px;
-    background-color: #fff;
-    border: none;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
-}
-
-.nav-search button i {
-    font-size: 16px;
-    color: #004080;
+    display: none; /* Hide the search bar */
 }
 
 .nav-list {
@@ -93,7 +67,7 @@ body {
 }
 
 .pipe {
-    color: #ffcc00; /* Gold */
+    color: #ff0000; /* Red */
     margin: 0 5px;
 }
 
@@ -158,8 +132,18 @@ body {
     color: #0073e6;
 }
 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu i {
+    font-size: 1.5em;
+    color: white;
+}
+
 .hero-section {
-    background: url('C:/Users/husto/OneDrive/Pictures/Soccer Banner.jpg') no-repeat top center/cover;
+    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat top center/cover;
     color: #ffffff;
     text-align: center;
     padding: 150px 20px;
@@ -226,6 +210,7 @@ section h1, section h2 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center; /* Center-aligns the text */
 }
 
 .tiles-container {
@@ -233,12 +218,14 @@ section h1, section h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 0 auto; /* Center the tiles container */
 }
 
 .tile {
     background-color: #004080;
     color: white;
-    width: 200px;
+    width: 100%;
+    max-width: 200px; /* Limit tile width */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -284,6 +271,14 @@ section h1, section h2 {
 .tile:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for IUSC Logo */
+.iusc-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the logo within the tile */
 }
 
 /* Styles for Events Section */
@@ -400,28 +395,55 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tiles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-content: center; /* Center tiles */
+    }
+}
+
 @media (max-width: 768px) {
     .nav-list {
+        display: none;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        background-color: #002b5c;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid #ffcc00; /* Gold border at the top */
+    }
+
+    .nav-list.open {
+        display: flex;
     }
 
     .nav-item, .pipe {
         margin: 5px 0;
     }
 
+    .hamburger-menu {
+        display: block;
+    }
+
     .social-icons {
         margin-top: 10px;
     }
 
-    .tiles-container, .events-container {
-        flex-direction: column;
-        align-items: center;
+    .tiles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-content: center; /* Center tiles */
     }
 
     .tile {
         width: 100%;
-        max-width: 400px;
     }
 
     .hero-section {
@@ -434,5 +456,33 @@ footer {
 
     .hero-section p {
         font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .partners-container img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .nav-list {
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .tiles-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
