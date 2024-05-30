@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        .responsive-img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -33,7 +27,7 @@
                 <li class="pipe">|</li>
                 <li class="nav-item"><a href="tryouts.html">Tryouts</a></li>
                 <li class="pipe">|</li>
-                <li class="nav-item"><a href="apparel.html">Apparel</a></li>
+                <li class="nav-item"><a href="#apparel">Apparel</a></li>
                 <li class="pipe">|</li>
                 <li class="nav-item dropdown">
                     <a href="#programs" class="dropbtn">Programs</a>
@@ -41,7 +35,7 @@
                         <a href="recreational-4u-8u.html">Recreational 4U - 8U</a>
                         <a href="recreational-9u-16u.html">Recreational 9U - 16U</a>
                         <a href="academy-9u-10u.html">Academy 9U - 10U</a>
-                        <a href="select-11u-19u.html">Select 11U - 19U</a>
+                        <a href="select-11U-19U.html">Select 11U - 19U</a>
                     </div>
                 </li>
                 <li class="pipe">|</li>
@@ -63,8 +57,7 @@
         </div>
     </header>
     <main class="container">
-        <section id="select" class="content-section">
-            <img src="https://raw.githubusercontent.com/huston345/jh-soccer/master/IUFC%20Logo.png" alt="Iowa United FC Scarf" class="responsive-img">
+        <section id="select-11u-19u" class="content-section">
             <h2>Select Program (Ages 11-19)</h2>
             <p>Welcome to our Select program, part of the prestigious Iowa United Soccer Club. Our select program is dedicated to developing elite soccer players through advanced training and competitive play. We focus on enhancing technical skills, tactical understanding, and physical fitness, ensuring each player reaches their full potential. Our players compete in top-tier leagues and tournaments, representing the highest standards of excellence and sportsmanship. Join us to experience elite soccer development in a supportive and challenging environment.</p>
 
@@ -122,35 +115,35 @@
             <img src="https://raw.githubusercontent.com/huston345/jh-soccer/master/IUFC.png" alt="Iowa United Soccer Club Logo" class="responsive-img">
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Footer Logo"></a>
-            </div>
-            <ul class="footer-nav">
-                <li class="footer-nav-item"><a href="index.html#home">Home</a></li>
-                <li class="footer-nav-item"><a href="tryouts.html">Tryouts</a></li>
-                <li class="footer-nav-item"><a href="apparel.html">Apparel</a></li>
-                <li class="footer-nav-item"><a href="about-us.html">About Us</a></li>
-                <li class="footer-nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="footer-social-icons">
-                <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/JHawkSoccer" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/jh-soccer" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+   <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Footer Logo"></a>
         </div>
-        <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hamburgerMenu = document.querySelector(".hamburger-menu");
-            const navList = document.querySelector(".nav-list");
+        <ul class="footer-nav">
+            <li class="footer-nav-item"><a href="index.html#home">Home</a></li>
+            <li class="footer-nav-item"><a href="tryouts.html">Tryouts</a></li>
+            <li class="footer-nav-item"><a href="apparel.html">Apparel</a></li>
+            <li class="footer-nav-item"><a href="about-us.html">About Us</a></li>
+            <li class="footer-nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/JHawkSoccer" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jh-soccer" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
 
-            hamburgerMenu.addEventListener("click", function() {
-                navList.classList.toggle("active");
-            });
+        hamburgerMenu.addEventListener("click", function() {
+            navList.classList.toggle("active");
         });
-    </script>
+    });
+</script>
 </body>
-</html>        
+</html>
