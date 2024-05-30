@@ -182,7 +182,7 @@ body {
     margin: 0;
     position: relative;
     z-index: 2;
-    color: #ffcc00; /* Changed to a softer color */
+    color: #ffffff; /* Changed back to white */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow effect */
 }
 
@@ -252,6 +252,7 @@ section h1, section h2 {
     flex-direction: column;
     justify-content: space-between;
     padding: 15px; /* Added padding to text */
+    box-sizing: border-box;
 }
 
 .tile img {
@@ -268,7 +269,6 @@ section h1, section h2 {
 
 .tile p {
     font-size: 1em;
-    padding: 0 10px;
 }
 
 .tile .cta-button {
