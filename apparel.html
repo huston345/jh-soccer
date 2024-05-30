@@ -12,16 +12,12 @@
     <header class="header">
         <div class="banner">
             <a href="tryouts.html" class="banner-link">
-                <img src="https://github.com/huston345/jh-soccer/blob/master/rec.jpg" alt="Tryouts Banner">
+                LEARN MORE: Iowa United Football Club: SELECT TRYOUT INFORMATION 2024/2025 SEASON
             </a>
         </div>
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Logo" /></a>
-            </div>
-            <div class="nav-search">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Logo"></a>
             </div>
             <div class="hamburger-menu">
                 <i class="fas fa-bars"></i>
@@ -34,7 +30,7 @@
                 <li class="nav-item"><a href="apparel.html">Apparel</a></li>
                 <li class="pipe">|</li>
                 <li class="nav-item dropdown">
-                    <a href="index.html#programs" class="dropbtn">Programs</a>
+                    <a href="#programs" class="dropbtn">Programs</a>
                     <div class="dropdown-content">
                         <a href="recreational-4u-8u.html">Recreational 4U - 8U</a>
                         <a href="recreational-9u-16u.html">Recreational 9U - 16U</a>
@@ -51,43 +47,66 @@
                     </div>
                 </li>
                 <li class="pipe">|</li>
-                <li class="nav-item"><a href="index.html#contact">Contact</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
             <div class="social-icons">
                 <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://twitter.com/JHawkSoccer" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/jh-soccer" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </header>
-    <main class="container">
-        <section id="apparel" class="content-section">
-            <h2>J-Hawk Soccer Academy Apparel</h2>
-            <p>Explore our exclusive range of soccer apparel and gear. Visit our store on Soccer.com to shop for the latest J-Hawk Soccer Academy merchandise.</p>
-            <div class="apparel-link">
-                <a href="https://www.soccer.com/club/#/2003032504" class="cta-button" target="_blank">Shop Now</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
-    </footer>
-    <script>
-        // Ensure internal links open in the same tab
-        document.querySelectorAll('a').forEach(function(link) {
-            if (!link.href.includes('http')) {
-                link.setAttribute('target', '_self');
-            }
-        });
+<main class="container">
+    <section id="apparel" class="content-section">
+        <h2>J-Hawk Soccer Academy Apparel</h2>
+        <p>Explore our exclusive range of soccer apparel and gear. Visit our store on Soccer.com to shop for the latest J-Hawk Soccer Academy merchandise.</p>
+        <div class="apparel-link">
+            <a href="https://www.soccer.com/club/#/2003032504" class="cta-button" target="_blank">Shop Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/c22ddbd0-dea6-413b-87f3-203f47ca1067/jhawk_logo_2.png/:/rs=w:133,h:86,cg=true,m/cr=w:133,h:86/qt=q:95" alt="Footer Logo"></a>
+        </div>
+        <ul class="footer-nav">
+            <li class="footer-nav-item"><a href="index.html#home">Home</a></li>
+            <li class="footer-nav-item"><a href="tryouts.html">Tryouts</a></li>
+            <li class="footer-nav-item"><a href="apparel.html">Apparel</a></li>
+            <li class="footer-nav-item"><a href="about-us.html">About Us</a></li>
+            <li class="footer-nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com/JHawkSoccer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/JHawkSoccer" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jh-soccer" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
+</footer>
+<script>
+    // Ensure internal links open in the same tab
+    document.querySelectorAll('a').forEach(function(link) {
+        if (!link.href.includes('http')) {
+            link.setAttribute('target', '_self');
+        }
+    });
 
-        // Ensure external links open in a new tab
-        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-            link.setAttribute('target', '_blank');
-            link.setAttribute('rel', 'noopener noreferrer');
-        });
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    });
 
-        document.querySelector('.hamburger-menu').addEventListener('click', () => {
-            document.querySelector('.nav-list').classList.toggle('open');
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
+
+        hamburgerMenu.addEventListener("click", function() {
+            navList.classList.toggle("active");
         });
-    </script>
+    });
+</script>
 </body>
 </html>
