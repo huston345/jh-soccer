@@ -344,6 +344,7 @@ section h1, section h2 {
     gap: 10px;
     max-width: 400px;
     margin: 0 auto;
+    text-align: left; /* Align form labels and inputs to the left */
 }
 
 .contact-form label {
