@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .field-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .field-description, .field-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        .field-description {
+            order: 1;
+        }
+        .field-images {
+            order: 2;
+        }
+        .field-images img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -63,7 +87,6 @@
             <p>Check the current status of Iowa soccer fields using the link below:</p>
             <a href="https://iowasoccer.demosphere.com/fields" class="cta-button" target="_blank">Iowa Soccer Field Status <i class="fas fa-arrow-right"></i></a>
             
-            <h3>Field Address</h3>
             <div class="field-info">
                 <div class="field-description">
                     <h4>Walker Johnston Park</h4>
