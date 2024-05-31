@@ -241,8 +241,8 @@ section h1, section h2 {
 }
 
 .tile {
-    background-color: #004080;
-    color: white;
+    background-color: #ffffff;
+    color: #004080;
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
@@ -265,11 +265,19 @@ section h1, section h2 {
 
 .tile h3 {
     margin: 10px 0;
+    font-size: 1.5em;
+    color: #004080; /* Dark blue */
+}
+
+.tile h4 {
+    margin: 5px 0;
     font-size: 1.2em;
+    color: #ff0000; /* Red */
 }
 
 .tile p {
     font-size: 1em;
+    color: #333; /* Default text color */
 }
 
 .tile .cta-button {
@@ -277,8 +285,8 @@ section h1, section h2 {
     align-items: center;
     justify-content: center;
     padding: 8px 12px; /* Adjusted padding for the button */
-    background-color: #fff;
-    color: #004080;
+    background-color: #0073e6;
+    color: #ffffff;
     text-align: center;
     margin: 10px auto; /* Center the button horizontally */
     border-radius: 5px;
@@ -296,7 +304,7 @@ section h1, section h2 {
 }
 
 .tile .cta-button:hover {
-    background-color: #ccc;
+    background-color: #005bb5;
 }
 
 .tile:hover {
