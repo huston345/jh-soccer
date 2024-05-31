@@ -243,8 +243,7 @@ section h1, section h2 {
 .tile {
     background-color: #ffffff;
     color: #004080;
-    width: 100%;
-    max-width: 300px;
+    width: calc(25% - 20px); /* Ensure four tiles fit in one row */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -505,6 +504,12 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .tile {
+        width: calc(50% - 20px); /* Two tiles per row on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -539,110 +544,10 @@ footer {
     .tiles-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .partners-container {
-        flex-direction: column;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .contact-form {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .contact-form button {
-        width: 100%;
-    }
-
-    .events-container {
-        flex-direction: column;
-    }
-
-    .event {
-        margin: 0 auto;
-    }
-
-    .banner {
-        font-size: 0.8em;
-    }
-
-    .cta-button {
-        width: 80%; /* Adjust button width */
-        padding: 10px 0; /* Adjust padding for height */
-        font-size: 14px; /* Adjust font size */
-        text-align: center;
-        margin: 0 auto; /* Center the button horizontally */
-        display: block; /* Ensure it's a block element to center properly */
     }
 
     .tile {
-        max-width: 100%;
-    }
-
-    .tile .cta-button {
-        width: 100%;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-.navbar {
-    padding: 0 10px;
-}
-
-.nav-item {
-    margin: 0 5px;
-}
-
-.hero-section {
-    padding: 120px 20px;
-}
-
-.container {
-    padding: 0 10px;
-}
-
-.tile {
-    max-width: 45%;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-item {
-        text-align: center;
-        width: 100%;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .nav-list {
-        display: none;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .hero-section {
-        padding: 100px 20px;
-    }
-
-    .tiles-container {
-        flex-direction: column;
-        align-items: center;
+        width: 100%; /* Full width on small screens */
     }
 
     .partners-container {
