@@ -240,6 +240,23 @@ section h1, section h2 {
     justify-content: center;
 }
 
+/* Centered Title */
+.tile-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #004080; /* Dark blue */
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+/* Left-Aligned Subtitle */
+.tile-subtitle {
+    text-align: left;
+    font-size: 1.2em;
+    color: #ff0000; /* Red */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Tile Styles */
 .tile {
     background-color: #ffffff;
     color: #004080;
@@ -262,21 +279,12 @@ section h1, section h2 {
     margin-bottom: 10px; /* Added margin to separate text from image */
 }
 
-.tile h3 {
-    margin: 10px 0;
-    font-size: 1.5em;
-    color: #004080; /* Dark blue */
-}
-
-.tile h4 {
-    margin: 5px 0;
-    font-size: 1.2em;
-    color: #ff0000; /* Red */
-}
-
+/* Left-Aligned Content */
 .tile p {
+    text-align: left;
     font-size: 1em;
     color: #333; /* Default text color */
+    margin-bottom: 15px; /* Adjust as needed */
 }
 
 .tile .cta-button {
