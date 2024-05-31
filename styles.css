@@ -232,6 +232,89 @@ section h1, section h2 {
     padding: 0 20px;
 }
 
+/* Player Pathway Styles */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #002b5c;
+    margin-bottom: 40px;
+}
+
+.player-pathway-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.player-pathway-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.player-pathway-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.pathway-title {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.pathway-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.pathway-stage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.stage-title {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    flex: 1;
+}
+
+.stage-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.stage-text {
+    flex: 1;
+}
+
+.join-us-section {
+    text-align: left;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.join-us-title {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
 /* Tiles Container Styles */
 .tiles-container {
     display: flex;
