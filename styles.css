@@ -276,7 +276,7 @@ section h1, section h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 10px; /* Reduce padding for a smaller button */
+    padding: 8px 12px; /* Adjusted padding for the button */
     background-color: #fff;
     color: #004080;
     text-align: center;
@@ -286,6 +286,8 @@ section h1, section h2 {
     font-weight: bold;
     font-size: 14px; /* Adjust font size for a smaller button */
     transition: background-color 0.3s;
+    max-width: 90%; /* Ensure the button does not overflow */
+    box-sizing: border-box;
 }
 
 .tile .cta-button i {
@@ -579,24 +581,106 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+.navbar {
+    padding: 0 10px;
+}
+
+.nav-item {
+    margin: 0 5px;
+}
+
+.hero-section {
+    padding: 120px 20px;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+.tile {
+    max-width: 45%;
+}
+
+@media (max-width: 768px) {
     .navbar {
-        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
     }
 
     .nav-item {
-        margin: 0 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.active {
+        display: flex;
     }
 
     .hero-section {
-        padding: 120px 20px;
+        padding: 100px 20px;
     }
 
-    .container {
-        padding: 0 10px;
+    .tiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partners-container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .events-container {
+        flex-direction: column;
+    }
+
+    .event {
+        margin: 0 auto;
+    }
+
+    .banner {
+        font-size: 0.8em;
+    }
+
+    .cta-button {
+        width: 80%; /* Adjust button width */
+        padding: 10px 0; /* Adjust padding for height */
+        font-size: 14px; /* Adjust font size */
+        text-align: center;
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Ensure it's a block element to center properly */
     }
 
     .tile {
-        max-width: 45%;
+        max-width: 100%;
+    }
+
+    .tile .cta-button {
+        width: 100%;
     }
 }
 
