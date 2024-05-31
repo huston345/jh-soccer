@@ -10,7 +10,7 @@ body {
 
 /* Header and Navbar Styles */
 .header {
-    background-color: #002b5c;
+    background-color: #002b5c; /* Dark blue color */
     padding: 10px 0;
     position: relative;
     z-index: 1000;
@@ -223,6 +223,7 @@ section {
 section h1, section h2 {
     color: #002b5c;
     margin-bottom: 20px;
+    text-align: center; /* Center the heading */
 }
 
 .container {
@@ -413,7 +414,7 @@ section h1, section h2 {
 
 /* Footer Styles */
 footer {
-    background-color: #004080; /* Slightly lighter blue for better contrast */
+    background-color: #002b5c; /* Dark blue color matching the header */
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
