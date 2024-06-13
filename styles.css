@@ -295,7 +295,7 @@ section h1, section h2 {
 }
 
 .stage-image {
-    max-width: 50%;
+    max-width: 30%; /* Reduced image size */
     height: auto;
     border-radius: 10px;
     margin: 0 20px;
@@ -690,7 +690,7 @@ footer {
     }
 
     .stage-image {
-        max-width: 100%;
+        max-width: 80%; /* Smaller image on mobile */
         margin: 0 auto 20px;
     }
 }
