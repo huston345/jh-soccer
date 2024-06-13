@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .tiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .tile {
+            text-align: center;
+            width: 45%;
+            margin: 10px 0;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tile img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -109,6 +144,7 @@
                     <div class="join-us-section">
                         <h4 class="join-us-title">Join Us on the Journey</h4>
                         <p><strong>Invitation:</strong> Become part of the J-Hawk Soccer Club and embark on an exciting soccer journey that fosters athletic and personal growth.</p>
+                        <a href="join.html" class="cta-button">Join Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
