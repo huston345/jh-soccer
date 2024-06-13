@@ -340,7 +340,7 @@ section h1, section h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px; /* Added padding to text */
+    padding: 15px;
     box-sizing: border-box;
 }
 
@@ -348,7 +348,7 @@ section h1, section h2 {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 10px; /* Added margin to separate text from image */
+    margin-bottom: 10px;
 }
 
 /* Left-Aligned Content */
