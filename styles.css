@@ -333,10 +333,9 @@ section h1, section h2 {
 .tile {
     background-color: #ffffff;
     color: #004080;
-    width: calc(25% - 20px); /* Ensure four tiles fit in one row */
+    flex: 1 1 23%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -587,7 +586,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .tile {
-        width: calc(50% - 20px); /* Two tiles per row on medium screens */
+        flex: 1 1 45%; /* Two tiles per row on medium screens */
     }
 }
 
@@ -718,20 +717,23 @@ footer {
     }
 
     .tile .cta-button {
-        font-size: 14px;.event h3 {
-    font-size: 1em;
-}
+        font-size: 14px;
+    }
 
-.event p {
-    font-size: 0.9em;
-}
+    .event h3 {
+        font-size: 1em;
+    }
 
-.contact-form input,
-.contact-form textarea {
-    font-size: 14px;
-}
+    .event p {
+        font-size: 0.9em;
+    }
 
-.contact-form button {
-    font-size: 16px;
-}
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
 }
