@@ -305,7 +305,6 @@ section h1, section h2 {
     flex: 1;
 }
 
-
 /* Tiles Container Styles */
 .tiles-container {
     display: flex;
@@ -685,6 +684,10 @@ footer {
     .player-pathway-text {
         padding: 10px;
     }
+
+    .stage-image {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -727,5 +730,3 @@ footer {
     font-size: 16px;
 }
 }
-
-
