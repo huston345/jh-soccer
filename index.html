@@ -7,6 +7,52 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .tiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .tile {
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            margin: 10px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tile img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* Center the image and add margin at the bottom */
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .tile {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .tile {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -74,9 +120,11 @@
                         <img src="https://i.ibb.co/5LfqdZ8/Young-Pathway.webp" alt="Young-Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Introduction to soccer and developing a love for the game.</p>
-                            <p>Respect for the badge</p>
-                            <p>Teamwork</p>
-                            <p>Enjoyment of the outdoors</p>
+                            <ul>
+                                <li>Respect for the badge</li>
+                                <li>Teamwork</li>
+                                <li>Enjoyment of the outdoors</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -85,8 +133,10 @@
                         <img src="https://i.ibb.co/djJVJjm/Pathway.webp" alt="Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Choosing between Recreational Soccer and Academy Program.</p>
-                            <p><strong>Recreational Soccer:</strong> Comfortable, relaxed environment.</p>
-                            <p><strong>Academy Program:</strong> Structured, skill-focused training.</p>
+                            <ul>
+                                <li><strong>Recreational Soccer:</strong> Comfortable, relaxed environment.</li>
+                                <li><strong>Academy Program:</strong> Structured, skill-focused training.</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -95,8 +145,10 @@
                         <img src="https://i.ibb.co/Tt9BWFG/Select-Older.webp" alt="Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Tailored pathways for different levels of competition and development.</p>
-                            <p><strong>Recreational Pathway:</strong> Fun and relaxed soccer experience.</p>
-                            <p><strong>Select Pathway:</strong> Competitive training, matches, and preparation for higher levels.</p>
+                            <ul>
+                                <li><strong>Recreational Pathway:</strong> Fun and relaxed soccer experience.</li>
+                                <li><strong>Select Pathway:</strong> Competitive training, matches, and preparation for higher levels.</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -133,16 +185,16 @@
                 <div class="tile">
                     <img src="https://i.ibb.co/wKvdRmt/Academy.webp" alt="Academy Program">
                     <div class="tile-content">
-                        <h3 class="tile-title">Academy</h3>
+                        <h3 class="tile-title">Academy</h4>
                         <h4 class="tile-subtitle">Ages: 9U - 10U</h4>
                         <p>For ages 9U - 10U, bridging recreational and competitive play.</p>
                         <a href="academy-9u-10u.html" class="cta-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="tile">
-                    <img src="https://raw.githubusercontent.com/huston345/jh-soccer/master/IUFC%20Logo.png" alt="Select Program">
+                    <img src="https://i.ibb.co/Tt9BWFG/Select-Older.webp" alt="Select Program">
                     <div class="tile-content">
-                        <h3 class="tile-title">Select</h3>
+                        <h3 class="tile-title">Select</h4>
                         <h4 class="tile-subtitle">Ages: 11U - 19U</h4>
                         <p>For ages 11U - 19U, competitive play at the highest levels.</p>
                         <a href="select-11u-19u.html" class="cta-button">Learn More <i class="fas fa-arrow-right"></i></a>
@@ -247,5 +299,15 @@
         </div>
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+            const navList = document.querySelector(".nav-list");
+
+            hamburgerMenu.addEventListener("click", function() {
+                navList.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
