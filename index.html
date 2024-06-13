@@ -74,11 +74,9 @@
                         <img src="https://i.ibb.co/5LfqdZ8/Young-Pathway.webp" alt="Young-Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Introduction to soccer and developing a love for the game.</p>
-                            <ul>
-                                <li>Respect for the badge</li>
-                                <li>Teamwork</li>
-                                <li>Enjoyment of the outdoors</li>
-                            </ul>
+                            <p>Respect for the badge</p>
+                            <p>Teamwork</p>
+                            <p>Enjoyment of the outdoors</p>
                         </div>
                     </div>
                     
@@ -87,10 +85,8 @@
                         <img src="https://i.ibb.co/djJVJjm/Pathway.webp" alt="Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Choosing between Recreational Soccer and Academy Program.</p>
-                            <ul>
-                                <li><strong>Recreational Soccer:</strong> Comfortable, relaxed environment.</li>
-                                <li><strong>Academy Program:</strong> Structured, skill-focused training.</li>
-                            </ul>
+                            <p><strong>Recreational Soccer:</strong> Comfortable, relaxed environment.</p>
+                            <p><strong>Academy Program:</strong> Structured, skill-focused training.</p>
                         </div>
                     </div>
                     
@@ -99,16 +95,15 @@
                         <img src="https://i.ibb.co/Tt9BWFG/Select-Older.webp" alt="Pathway" class="stage-image">
                         <div class="stage-text">
                             <p><strong>Focus:</strong> Tailored pathways for different levels of competition and development.</p>
-                            <ul>
-                                <li><strong>Recreational Pathway:</strong> Fun and relaxed soccer experience.</li>
-                                <li><strong>Select Pathway:</strong> Competitive training, matches, and preparation for higher levels.</li>
-                            </ul>
+                            <p><strong>Recreational Pathway:</strong> Fun and relaxed soccer experience.</p>
+                            <p><strong>Select Pathway:</strong> Competitive training, matches, and preparation for higher levels.</p>
                         </div>
                     </div>
                     
                     <div class="join-us-section">
                         <h4 class="join-us-title">Join Us on the Journey</h4>
                         <p><strong>Invitation:</strong> Become part of the J-Hawk Soccer Club and embark on an exciting soccer journey that fosters athletic and personal growth.</p>
+                        <a href="join.html" class="cta-button">Join Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -252,42 +247,5 @@
         </div>
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hamburgerMenu = document.querySelector(".hamburger-menu");
-            const navList = document.querySelector(".nav-list");
-
-            hamburgerMenu.addEventListener("click", function() {
-                navList.classList.toggle("active");
-            });
-
-            // Mind Map JavaScript
-            const agesNode = document.getElementById('ages');
-            const age48Node = document.getElementById('age-4-8');
-            const age911Node = document.getElementById('age-9-11');
-            const age1219Node = document.getElementById('age-12-19');
-            const category48Node = document.getElementById('category-4-8');
-            const category911Node = document.getElementById('category-9-11');
-            const category1219Node = document.getElementById('category-12-19');
-
-            agesNode.addEventListener('click', () => {
-                age48Node.classList.toggle('hidden');
-                age911Node.classList.toggle('hidden');
-                age1219Node.classList.toggle('hidden');
-            });
-
-            age48Node.addEventListener('click', () => {
-                category48Node.classList.toggle('hidden');
-            });
-
-            age911Node.addEventListener('click', () => {
-                category911Node.classList.toggle('hidden');
-            });
-
-            age1219Node.addEventListener('click', () => {
-                category1219Node.classList.toggle('hidden');
-            });
-        });
-    </script>
 </body>
 </html>
