@@ -147,7 +147,16 @@ body {
     color: white;
 }
 
-/* Hero Section Styles */
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 /* Hero Section Styles */
 .hero-section {
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
@@ -228,7 +237,6 @@ body {
         font-size: 18px;
     }
 }
-
 /* Main Content Styles */
 main {
     padding: 20px;
