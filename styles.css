@@ -685,8 +685,13 @@ footer {
         padding: 10px;
     }
 
+    .pathway-stage {
+        flex-direction: column;
+    }
+
     .stage-image {
         max-width: 100%;
+        margin: 0 auto 20px;
     }
 }
 
