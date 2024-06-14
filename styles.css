@@ -59,8 +59,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1400px; /* Adjusted max-width for larger screens */
+    margin: 0 auto; /* Center the navbar */
     padding: 0 20px;
 }
 
@@ -290,7 +290,7 @@ section h1, section h2 {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* Adjusted max-width for larger screens */
     margin: 0 auto;
     padding: 0 20px;
 }
