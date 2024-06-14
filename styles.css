@@ -12,6 +12,10 @@
     --tile-hover-bg-color: #005bb5;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -168,9 +172,9 @@ body {
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    padding: 0;
-    width: 100vw; /* Ensure full viewport width */
-    height: 100vh; /* Set to full viewport height */
+    padding: 150px 20px;
+    width: 100%; /* Ensure full width */
+    height: 100vh; /* Set a maximum height for the hero section */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -232,7 +236,7 @@ body {
 @media (max-width: 768px) {
     .hero-section {
         padding: 100px 20px;
-        height: 100vh;
+        height: 60vh;
     }
     .hero-section h1 {
         font-size: 36px;
@@ -241,6 +245,7 @@ body {
         font-size: 18px;
     }
 }
+
 
 /* Main Content Styles */
 /* -------------------------------- */
@@ -665,7 +670,7 @@ footer {
     }
     .hero-section {
         padding: 100px 20px;
-        height: 100vh;
+        height: 60vh;
     }
     .hero-section h1 {
         font-size: 36px;
