@@ -1,17 +1,30 @@
 /* General Styles */
-html, body {
+/* -------------------------------- */
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-font-color: #333;
+    --header-bg-color: #002b5c;
+    --banner-bg-color: #004080;
+    --highlight-color: #ffcc00;
+    --cta-bg-color: #0073e6;
+    --cta-hover-bg-color: #005bb5;
+    --tile-bg-color: #ffffff;
+    --tile-hover-bg-color: #005bb5;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: #f4f4f4;
-    color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    overflow-x: hidden;
 }
 
 /* Header and Navbar Styles */
+/* -------------------------------- */
 .header {
-    background-color: #002b5c; /* Dark blue color */
+    background-color: var(--header-bg-color);
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -19,13 +32,13 @@ html, body {
 }
 
 .banner {
-    background-color: #004080;
+    background-color: var(--banner-bg-color);
     color: #ffffff;
     padding: 5px 0;
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
-    border-bottom: 2px solid #ffcc00;
+    border-bottom: 2px solid var(--highlight-color);
 }
 
 .banner a {
@@ -35,7 +48,7 @@ html, body {
 }
 
 .banner a:hover {
-    color: #ffcc00;
+    color: var(--highlight-color);
 }
 
 .navbar {
@@ -48,7 +61,7 @@ html, body {
 }
 
 .logo img {
-    height: 70px; /* Made the logo slightly larger */
+    height: 70px;
 }
 
 .nav-search {
@@ -80,19 +93,19 @@ html, body {
     font-size: 16px;
     padding: 10px 15px;
     display: block;
-    transition: background-color 0.3s, color 0.3s; /* Added transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item a:hover {
-    background-color: #0073e6;
-    color: #ffcc00; /* Added hover effect for links */
+    background-color: var(--cta-bg-color);
+    color: var(--highlight-color);
     border-radius: 4px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #002b5c;
+    background-color: var(--header-bg-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2000;
@@ -107,8 +120,8 @@ html, body {
 }
 
 .dropdown-content a:hover {
-    background-color: #0073e6;
-    color: #ffcc00; /* Added hover effect for dropdown links */
+    background-color: var(--cta-bg-color);
+    color: var(--highlight-color);
 }
 
 .dropdown:hover .dropdown-content {
@@ -135,7 +148,7 @@ html, body {
 }
 
 .social-icons a:hover {
-    color: #0073e6;
+    color: var(--cta-bg-color);
 }
 
 .hamburger-menu {
@@ -149,6 +162,7 @@ html, body {
 }
 
 /* Hero Section Styles */
+/* -------------------------------- */
 .hero-section {
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
@@ -156,10 +170,10 @@ html, body {
     text-align: center;
     padding: 150px 20px;
     width: 100%;
-    height: 80vh; /* Set a maximum height for the hero section */
+    height: 80vh;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden; /* Ensure the image doesn't leave gaps on mobile */
+    overflow: hidden;
 }
 
 .hero-section::before {
@@ -186,8 +200,8 @@ html, body {
     margin: 0;
     position: relative;
     z-index: 2;
-    color: #ffffff; /* Changed back to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow effect */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section p {
@@ -196,13 +210,13 @@ html, body {
     position: relative;
     z-index: 2;
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added shadow effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0073e6;
+    background-color: var(--cta-bg-color);
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
@@ -211,10 +225,24 @@ html, body {
 }
 
 .cta-button:hover {
-    background-color: #005bb5;
+    background-color: var(--cta-hover-bg-color);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 20px;
+        height: 60vh;
+    }
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .hero-section p {
+        font-size: 18px;
+    }
 }
 
 /* Main Content Styles */
+/* -------------------------------- */
 main {
     padding: 20px;
     padding-bottom: 80px;
@@ -225,9 +253,9 @@ section {
 }
 
 section h1, section h2 {
-    color: #002b5c;
+    color: var(--header-bg-color);
     margin-bottom: 20px;
-    text-align: center; /* Center the heading */
+    text-align: center;
 }
 
 .container {
@@ -237,6 +265,7 @@ section h1, section h2 {
 }
 
 /* Player Pathway Styles */
+/* -------------------------------- */
 .section {
     max-width: 1200px;
     margin: 0 auto;
@@ -246,7 +275,7 @@ section h1, section h2 {
 .section-title {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: #002b5c;
+    color: var(--header-bg-color);
     margin-bottom: 40px;
 }
 
@@ -270,7 +299,7 @@ section h1, section h2 {
 .player-pathway-text {
     padding: 20px;
     text-align: center;
-    word-wrap: break-word; /* Ensure words wrap properly */
+    word-wrap: break-word;
 }
 
 .pathway-title {
@@ -282,7 +311,7 @@ section h1, section h2 {
     font-family: 'Open Sans', sans-serif;
     color: #555;
     margin-bottom: 40px;
-    font-size: 24px; /* Match the size of "Empowering Youth Through Sports" */
+    font-size: 24px;
 }
 
 .pathway-stage {
@@ -311,12 +340,14 @@ section h1, section h2 {
 }
 
 /* Join Us Section */
+/* -------------------------------- */
 .join-us-title,
 .join-us-section p {
-    font-size: 16px; /* Match the size of "For ages 4U - 8U, focusing on fun and basic skills" */
+    font-size: 16px;
 }
 
 /* Tiles Container Styles */
+/* -------------------------------- */
 .tiles-container {
     display: flex;
     flex-wrap: wrap;
@@ -324,25 +355,22 @@ section h1, section h2 {
     justify-content: center;
 }
 
-/* Centered Title */
 .tile-title {
     text-align: center;
     font-size: 1.5em;
-    color: #004080; /* Dark blue */
-    margin-bottom: 5px; /* Adjust as needed */
+    color: #004080;
+    margin-bottom: 5px;
 }
 
-/* Left-Aligned Subtitle */
 .tile-subtitle {
     text-align: left;
     font-size: 1.2em;
-    color: #ff0000; /* Red */
-    margin-bottom: 10px; /* Adjust as needed */
+    color: #ff0000;
+    margin-bottom: 10px;
 }
 
-/* Tile Styles */
 .tile {
-    background-color: #ffffff;
+    background-color: var(--tile-bg-color);
     color: #004080;
     flex: 1 1 23%;
     border-radius: 10px;
@@ -353,7 +381,7 @@ section h1, section h2 {
     justify-content: space-between;
     padding: 15px;
     box-sizing: border-box;
-    margin-bottom: 20px; /* Ensure some space between tiles */
+    margin-bottom: 20px;
 }
 
 .tile img {
@@ -363,39 +391,38 @@ section h1, section h2 {
     margin-bottom: 10px;
 }
 
-/* Left-Aligned Content */
 .tile p {
     text-align: left;
     font-size: 1em;
-    color: #333; /* Default text color */
-    margin-bottom: 15px; /* Adjust as needed */
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .tile .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px; /* Adjusted padding for the button */
-    background-color: #0073e6;
+    padding: 8px 12px;
+    background-color: var(--cta-bg-color);
     color: #ffffff;
     text-align: center;
-    margin: 10px auto; /* Center the button horizontally */
+    margin: 10px auto;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px; /* Adjust font size for a smaller button */
+    font-size: 14px;
     transition: background-color 0.3s;
-    max-width: 90%; /* Ensure the button does not overflow */
+    max-width: 90%;
     box-sizing: border-box;
 }
 
 .tile .cta-button i {
-    margin-left: 5px; /* Adjust margin for the icon */
-    font-size: 14px; /* Adjust icon size */
+    margin-left: 5px;
+    font-size: 14px;
 }
 
 .tile .cta-button:hover {
-    background-color: #005bb5;
+    background-color: var(--cta-hover-bg-color);
 }
 
 .tile:hover {
@@ -403,7 +430,8 @@ section h1, section h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles for Events Section */
+/* Events Section Styles */
+/* -------------------------------- */
 #events {
     background-color: #fff;
     padding: 20px;
@@ -432,7 +460,8 @@ section h1, section h2 {
     margin: 5px 0;
 }
 
-/* Styles for Contact Us Section */
+/* Contact Us Section Styles */
+/* -------------------------------- */
 #contact {
     background-color: #fff;
     padding: 20px;
@@ -445,7 +474,7 @@ section h1, section h2 {
     gap: 10px;
     max-width: 400px;
     margin: 0 auto;
-    text-align: left; /* Align form labels and inputs to the left */
+    text-align: left;
 }
 
 .contact-form label {
@@ -463,18 +492,18 @@ section h1, section h2 {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #999; /* Placeholder text color */
+    color: #999;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #0073e6;
+    border-color: var(--cta-bg-color);
     box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
 }
 
 .contact-form button {
     align-self: center;
-    background-color: #0073e6;
+    background-color: var(--cta-bg-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -484,11 +513,12 @@ section h1, section h2 {
 }
 
 .contact-form button:hover {
-    background-color: #005bb5;
-    color: #ffcc00; /* Added hover effect */
+    background-color: var(--cta-hover-bg-color);
+    color: var(--highlight-color);
 }
 
-/* Styles for Partners Section */
+/* Partners Section Styles */
+/* -------------------------------- */
 #partners {
     background-color: #fff;
     padding: 20px;
@@ -506,17 +536,18 @@ section h1, section h2 {
     width: 150px;
     height: 100px;
     object-fit: contain;
-    transition: transform 0.3s, filter 0.3s; /* Added hover effect */
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .partners-container a img:hover {
     transform: scale(1.05);
-    filter: brightness(1.2); /* Added hover effect */
+    filter: brightness(1.2);
 }
 
 /* Footer Styles */
+/* -------------------------------- */
 footer {
-    background-color: #002b5c; /* Dark blue color matching the header */
+    background-color: var(--header-bg-color);
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -524,13 +555,13 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px; /* Adjust font size for better readability */
+    font-size: 14px;
 }
 
 .footer-nav {
     list-style: none;
     padding: 0;
-    margin: 0 0 10px; /* Add some margin for spacing */
+    margin: 0 0 10px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -547,7 +578,7 @@ footer {
 }
 
 .footer-nav-item a:hover {
-    color: #ffcc00; /* Add hover effect */
+    color: var(--highlight-color);
 }
 
 .footer-social-icons {
@@ -563,10 +594,11 @@ footer {
 }
 
 .footer-social-icons a:hover {
-    color: #ffcc00; /* Added hover effect */
+    color: var(--highlight-color);
 }
 
 /* Content Section Styles */
+/* -------------------------------- */
 .content-section {
     padding: 20px;
     background-color: #fff;
@@ -582,8 +614,8 @@ footer {
 
 .question {
     font-weight: bold;
-    background-color: #e7f3fe; /* Light blue background */
-    border-left: 4px solid #0073e6; /* Blue left border */
+    background-color: #e7f3fe;
+    border-left: 4px solid var(--cta-bg-color);
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -592,13 +624,14 @@ footer {
 .question::before {
     content: 'Q: ';
     font-weight: bold;
-    color: #0073e6; /* Blue color for the Q: prefix */
+    color: var(--cta-bg-color);
 }
 
 /* Responsive Design */
+/* -------------------------------- */
 @media (max-width: 1024px) {
     .tile {
-        flex: 1 1 45%; /* Two tiles per row on medium screens */
+        flex: 1 1 45%;
     }
 }
 
@@ -606,125 +639,94 @@ footer {
     .navbar {
         flex-direction: column;
     }
-
     .nav-list {
         flex-direction: column;
         width: 100%;
     }
-
     .nav-item {
         text-align: center;
         width: 100%;
     }
-
     .dropdown-content {
         width: 100%;
     }
-
     .dropdown-content a {
         text-align: center;
     }
-
     .hamburger-menu {
         display: block;
     }
-
     .nav-list {
         display: none;
     }
-
     .nav-list.active {
         display: flex;
     }
-
     .hero-section {
         padding: 100px 20px;
-        height: 60vh; /* Ensure the image covers the full viewport height on mobile */
+        height: 60vh;
     }
-
     .hero-section h1 {
         font-size: 36px;
     }
-
     .hero-section p {
         font-size: 18px;
     }
-
     .tiles-container {
         flex-direction: column;
         align-items: center;
     }
-
     .tile {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 10px; /* Reduce space between tiles */
+        width: 100%;
+        margin-bottom: 10px;
     }
-
-    .category {
-        margin-bottom: 20px; /* Add some margin between categories */
-    }
-
     .partners-container {
         flex-direction: column;
     }
-
     .social-icons {
         justify-content: center;
     }
-
     .contact-form {
         width: 100%;
         padding: 0 20px;
     }
-
     .contact-form button {
         width: 100%;
     }
-
     .events-container {
         flex-direction: column;
     }
-
     .event {
         margin: 0 auto;
     }
-
     .banner {
         font-size: 0.8em;
     }
-
     .cta-button {
-        width: 80%; /* Adjust button width */
-        padding: 10px 0; /* Adjust padding for height */
-        font-size: 14px; /* Adjust font size */
+        width: 80%;
+        padding: 10px 0;
+        font-size: 14px;
         text-align: center;
-        margin: 0 auto; /* Center the button horizontally */
-        display: block; /* Ensure it's a block element to center properly */
+        margin: 0 auto;
+        display: block;
     }
-
     .tile {
         max-width: 100%;
     }
-
     .tile .cta-button {
         width: 100%;
     }
-
-    /* Player Pathway Styles */
     .player-pathway-tile {
         padding: 15px;
     }
-
     .player-pathway-text {
         padding: 10px;
     }
-
     .pathway-stage {
         flex-direction: column;
     }
-
     .stage-image {
-        max-width: 80%; /* Smaller image on mobile */
+        max-width: 80%;
         margin: 0 auto 20px;
     }
 }
