@@ -441,6 +441,10 @@ section h1, section h2 {
     background-color: #fff;
     padding: 20px;
     text-align: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Add a maximum width */
+    padding: 40px 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Add border radius */
 }
 
 .events-container {
@@ -471,6 +475,10 @@ section h1, section h2 {
     background-color: #fff;
     padding: 20px;
     text-align: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Add a maximum width */
+    padding: 40px 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Add border radius */
 }
 
 .contact-form {
