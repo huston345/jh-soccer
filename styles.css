@@ -358,7 +358,6 @@ section h1, section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 0 20px; /* Added padding for better spacing */
 }
 
 .tile-title {
@@ -440,11 +439,12 @@ section h1, section h2 {
 /* -------------------------------- */
 #events {
     background-color: #fff;
+    padding: 20px;
     text-align: center;
+    max-width: 1200px; /* Added max-width to center the section */
     margin: 0 auto;
-    max-width: 1200px; /* Add a maximum width */
-    padding: 40px 20px; /* Add padding for better spacing */
-    border-radius: 10px; /* Add border radius */
+    padding: 40px 20px;
+    border-radius: 10px; /* Add border radius for section */
 }
 
 .events-container {
@@ -473,11 +473,12 @@ section h1, section h2 {
 /* -------------------------------- */
 #contact {
     background-color: #fff;
+    padding: 20px;
     text-align: center;
+    max-width: 1200px; /* Added max-width to center the section */
     margin: 0 auto;
-    max-width: 1200px; /* Add a maximum width */
-    padding: 40px 20px; /* Add padding for better spacing */
-    border-radius: 10px; /* Add border radius */
+    padding: 40px 20px;
+    border-radius: 10px; /* Add border radius for section */
 }
 
 .contact-form {
