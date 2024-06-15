@@ -264,7 +264,7 @@ section h1, section h2 {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -272,7 +272,7 @@ section h1, section h2 {
 /* Player Pathway Styles */
 /* -------------------------------- */
 .section {
-    max-width: 80%;
+    max-width: 1200px;
     margin: 0 auto 40px auto; /* Added bottom margin */
     padding: 40px 20px;
     background-color: #fff;
@@ -361,8 +361,8 @@ section h1, section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 80%; /* Adjusted width to 80% */
+    margin: 0 auto; /* Centered the container */
 }
 
 .tile-title {
@@ -448,7 +448,7 @@ section h1, section h2 {
     background-color: #fff; /* Ensure sections have a background color */
     border-radius: 10px; /* Add border radius for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%;
+    max-width: 80%; /* Adjusted width to 80% */
 }
 
 .events-container {
@@ -482,7 +482,7 @@ section h1, section h2 {
     background-color: #fff; /* Ensure sections have a background color */
     border-radius: 10px; /* Add border radius for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%;
+    max-width: 80%; /* Adjusted width to 80% */
 }
 
 .contact-form {
@@ -542,7 +542,7 @@ section h1, section h2 {
     background-color: #fff; /* Ensure sections have a background color */
     border-radius: 10px; /* Add border radius for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%;
+    max-width: 80%; /* Adjusted width to 80% */
 }
 
 .partners-container {
