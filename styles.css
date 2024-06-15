@@ -5,7 +5,7 @@
     --main-font-color: #333;
     --header-bg-color: #002b5c;
     --banner-bg-color: #004080;
-    --highlight-color: #ffcc00;
+    --highlight-color: #ff0000; /* Changed to red */
     --cta-bg-color: #0073e6;
     --cta-hover-bg-color: #005bb5;
     --tile-bg-color: #ffffff;
@@ -267,12 +267,12 @@ section h1, section h2 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-section h1::after, section h2::after {
+section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     content: '';
     display: block;
     width: 50px;
     height: 3px;
-    background-color: var(--highlight-color);
+    background-color: var(--highlight-color); /* Changed to red */
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -506,7 +506,7 @@ section h1::after, section h2::after {
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: var(--cta-bg-color);
+    background-color: var (--cta-bg-color);
     color: #ffffff;
     text-align: center;
     margin: 10px auto;
@@ -525,7 +525,7 @@ section h1::after, section h2::after {
 }
 
 .event .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var (--cta-hover-bg-color);
 }
 
 .event:hover {
