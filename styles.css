@@ -1,5 +1,4 @@
 /* General Styles */
-/* -------------------------------- */
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -26,7 +25,6 @@ body {
 }
 
 /* Header and Navbar Styles */
-/* -------------------------------- */
 .header {
     background-color: var(--header-bg-color);
     padding: 10px 0;
@@ -166,19 +164,18 @@ body {
 }
 
 /* Hero Section Styles */
-/* -------------------------------- */
 .hero-section {
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     text-align: center;
     padding: 150px 20px;
-    width: 100%; /* Ensure full width */
-    height: 100vh; /* Set a maximum height for the hero section */
+    width: 100%;
+    height: 100vh;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    margin: 0; /* Remove any margin */
+    margin: 0;
 }
 
 .hero-section::before {
@@ -247,7 +244,6 @@ body {
 }
 
 /* Main Content Styles */
-/* -------------------------------- */
 main {
     padding: 20px;
     padding-bottom: 80px;
@@ -263,21 +259,14 @@ section h1, section h2 {
     text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* Player Pathway Styles */
-/* -------------------------------- */
 .section {
-    max-width: 80%; /* Adjusted width to 80% */
-    margin: 0 auto 40px auto; /* Centered and added bottom margin */
+    max-width: 80%;
+    margin: 0 auto 40px auto;
     padding: 40px 20px;
     background-color: #fff;
-    border-radius: 10px; /* Added border radius for section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
@@ -348,21 +337,19 @@ section h1, section h2 {
 }
 
 /* Join Us Section */
-/* -------------------------------- */
 .join-us-title,
 .join-us-section p {
     font-size: 16px;
 }
 
 /* Tiles Container Styles */
-/* -------------------------------- */
 .tiles-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    max-width: 80%; /* Adjusted width to 80% */
-    margin: 0 auto; /* Centered the container */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .tile-title {
@@ -382,16 +369,16 @@ section h1, section h2 {
 .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    flex: 1 1 calc(25% - 20px);
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
     box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tile img {
@@ -421,7 +408,7 @@ section h1, section h2 {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    transition: background-color 0.3s, transform 0.3s;
     max-width: 90%;
     box-sizing: border-box;
 }
@@ -436,19 +423,18 @@ section h1, section h2 {
 }
 
 .tile:hover {
-    transform: translateY(-10px); /* Increased hover transform effect */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Events Section Styles */
-/* -------------------------------- */
 #events {
-    padding: 40px 20px; /* Ensure consistent padding within sections */
-    margin: 0 auto 40px auto; /* Ensure consistent margin between sections */
-    background-color: #fff; /* Ensure sections have a background color */
-    border-radius: 10px; /* Add border radius for sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%; /* Adjusted width to 80% */
+    padding: 40px 20px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
 }
 
 .events-container {
@@ -475,14 +461,13 @@ section h1, section h2 {
 }
 
 /* Contact Us Section Styles */
-/* -------------------------------- */
 #contact {
-    padding: 40px 20px; /* Ensure consistent padding within sections */
-    margin: 0 auto 40px auto; /* Ensure consistent margin between sections */
-    background-color: #fff; /* Ensure sections have a background color */
-    border-radius: 10px; /* Add border radius for sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%; /* Adjusted width to 80% */
+    padding: 40px 20px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
 }
 
 .contact-form {
@@ -535,14 +520,13 @@ section h1, section h2 {
 }
 
 /* Partners Section Styles */
-/* -------------------------------- */
 #partners {
-    padding: 40px 20px; /* Ensure consistent padding within sections */
-    margin: 0 auto 40px auto; /* Ensure consistent margin between sections */
-    background-color: #fff; /* Ensure sections have a background color */
-    border-radius: 10px; /* Add border radius for sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for sections */
-    max-width: 80%; /* Adjusted width to 80% */
+    padding: 40px 20px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
 }
 
 .partners-container {
@@ -565,7 +549,6 @@ section h1, section h2 {
 }
 
 /* Footer Styles */
-/* -------------------------------- */
 footer {
     background-color: var(--header-bg-color);
     color: #ffffff;
@@ -618,7 +601,6 @@ footer {
 }
 
 /* Content Section Styles */
-/* -------------------------------- */
 .content-section {
     padding: 20px;
     background-color: #fff;
@@ -648,10 +630,9 @@ footer {
 }
 
 /* Responsive Design */
-/* -------------------------------- */
 @media (max-width: 1024px) {
     .tile {
-        flex: 1 1 calc(45% - 20px); /* Adjusted to fit 2 tiles per row on medium screens */
+        flex: 1 1 calc(45% - 20px);
     }
 }
 
