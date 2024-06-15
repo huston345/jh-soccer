@@ -440,47 +440,49 @@ section h1, section h2 {
 /* Events Section Styles */
 /* -------------------------------- */
 #events {
-    background-color: #fff;
-    padding: 20px;
     text-align: center;
-    max-width: 1200px; /* Added max-width to center the section */
-    margin: 0 auto;
-    padding: 40px 20px;
-    border-radius: 10px; /* Add border radius for section */
+    padding: 20px;
+}
+
+#events h2 {
+    margin-bottom: 20px;
 }
 
 .events-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    width: 90%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(25% - 20px); 
+    flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
     box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .event h3 {
     margin: 0 0 10px;
-    text-align: center;  /* Center title */
-    font-size: 1.5em;  /* Consistent font size */
+    text-align: center; /* Center title */
+    font-size: 1.5em; /* Consistent font size */
     color: #004080;
 }
 
 .event p {
     margin: 5px 0;
-    text-align: left;  /* Left-align text */
+    text-align: left; /* Left-align text */
     font-size: 1em;
     color: #333;
 }
@@ -498,7 +500,7 @@ section h1, section h2 {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s; 
+    transition: background-color 0.3s, transform 0.3s;
     max-width: 90%;
     box-sizing: border-box;
 }
@@ -513,20 +515,31 @@ section h1, section h2 {
 }
 
 .event:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Us Section Styles */
 /* -------------------------------- */
 #contact {
-    background-color: #fff;
-    padding: 20px;
     text-align: center;
-    max-width: 1200px; /* Added max-width to center the section */
-    margin: 0 auto;
-    padding: 40px 20px;
-    border-radius: 10px; /* Add border radius for section */
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 90%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .contact-form {
@@ -597,7 +610,7 @@ section h1, section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 30%; /* Adjusted width to 90% of the screen */
+    width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -701,7 +714,7 @@ footer {
 .question::before {
     content: 'Q: ';
     font-weight: bold;
-    color: var(--cta-bg-color);
+    color: var (--cta-bg-color);
 }
 
 /* Responsive Design */
