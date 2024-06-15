@@ -272,8 +272,8 @@ section h1, section h2 {
 /* Player Pathway Styles */
 /* -------------------------------- */
 .section {
-    max-width: 1200px;
-    margin: 0 auto 40px auto; /* Added bottom margin */
+    max-width: 80%; /* Adjusted width to 80% */
+    margin: 0 auto 40px auto; /* Centered and added bottom margin */
     padding: 40px 20px;
     background-color: #fff;
     border-radius: 10px; /* Added border radius for section */
