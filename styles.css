@@ -492,7 +492,7 @@ section h1, section h2 {
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: var(--cta-bg-color);
+    background-color: var (--cta-bg-color);
     color: #ffffff;
     text-align: center;
     margin: 10px auto;
@@ -511,7 +511,7 @@ section h1, section h2 {
 }
 
 .event .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var (--cta-hover-bg-color);
 }
 
 .event:hover {
@@ -818,5 +818,16 @@ footer {
     .stage-image {
         max-width: 80%;
         margin: 0 auto 20px;
+    }
+}
+
+/* Custom Adjustments for Large Screens */
+/* -------------------------------- */
+@media (min-width: 1024px) {
+    .contact-container {
+        width: 60%; /* Set to 60% width on large screens */
+    }
+    .partners-tile {
+        width: 30%; /* Set to 30% width on large screens */
     }
 }
