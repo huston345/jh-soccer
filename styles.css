@@ -227,7 +227,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: var (--cta-hover-bg-color);
+    background-color: var(--cta-hover-bg-color);
 }
 
 @media (max-width: 768px) {
@@ -283,7 +283,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
