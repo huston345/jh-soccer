@@ -227,7 +227,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var (--cta-hover-bg-color);
 }
 
 @media (max-width: 768px) {
@@ -235,9 +235,11 @@ body {
         padding: 100px 20px;
         height: 60vh;
     }
+
     .hero-section h1 {
         font-size: 36px;
     }
+
     .hero-section p {
         font-size: 18px;
     }
@@ -253,7 +255,8 @@ section {
     margin-bottom: 40px;
 }
 
-section h1, section h2 {
+section h1,
+section h2 {
     color: var(--header-bg-color);
     margin-bottom: 20px;
     text-align: center;
@@ -282,7 +285,7 @@ section h1, section h2 {
     align-items: center;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -610,7 +613,8 @@ footer {
     text-align: left;
 }
 
-.questions p, .program-details p {
+.questions p,
+.program-details p {
     margin: 5px 0;
 }
 
@@ -640,69 +644,89 @@ footer {
     .navbar {
         flex-direction: column;
     }
+
     .nav-list {
         flex-direction: column;
         width: 100%;
     }
+
     .nav-item {
         text-align: center;
         width: 100%;
     }
+
     .dropdown-content {
         width: 100%;
     }
+
     .dropdown-content a {
         text-align: center;
     }
+
     .hamburger-menu {
         display: block;
     }
+
     .nav-list {
         display: none;
     }
+
     .nav-list.active {
         display: flex;
     }
+
     .hero-section {
         padding: 100px 20px;
         height: 60vh;
     }
+
     .hero-section h1 {
         font-size: 36px;
     }
+
     .hero-section p {
         font-size: 18px;
     }
+
     .tiles-container {
         flex-direction: column;
         align-items: center;
     }
+
     .tile {
         width: 100%;
         margin-bottom: 10px;
     }
+
     .partners-container {
         flex-direction: column;
     }
+
     .social-icons {
         justify-content: center;
     }
+
     .contact-form {
         width: 100%;
         padding: 0 20px;
     }
+
     .contact-form button {
         width: 100%;
     }
+
     .events-container {
         flex-direction: column;
     }
+
     .event {
         margin: 0 auto;
     }
+
     .banner {
         font-size: 0.8em;
     }
+
     .cta-button {
         width: 80%;
         padding: 10px 0;
@@ -711,21 +735,27 @@ footer {
         margin: 0 auto;
         display: block;
     }
+
     .tile {
         max-width: 100%;
     }
+
     .tile .cta-button {
         width: 100%;
     }
+
     .player-pathway-tile {
         padding: 15px;
     }
+
     .player-pathway-text {
         padding: 10px;
     }
+
     .pathway-stage {
         flex-direction: column;
     }
+
     .stage-image {
         max-width: 80%;
         margin: 0 auto 20px;
