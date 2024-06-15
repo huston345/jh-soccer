@@ -5,7 +5,7 @@
     --main-font-color: #333;
     --header-bg-color: #002b5c;
     --banner-bg-color: #004080;
-    --highlight-color: #ff0000; /* Changed to red */
+    --highlight-color: #ffcc00;
     --cta-bg-color: #0073e6;
     --cta-hover-bg-color: #005bb5;
     --tile-bg-color: #ffffff;
@@ -172,7 +172,7 @@ body {
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
     width: 100%; /* Ensure full width */
     height: 100vh; /* Set a maximum height for the hero section */
     box-sizing: border-box;
@@ -235,7 +235,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 60px 10px;
+        padding: 100px 20px;
         height: 60vh;
     }
     .hero-section h1 {
@@ -254,27 +254,13 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 section h1, section h2 {
     color: var(--header-bg-color);
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
     margin-bottom: 20px;
-    position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: var(--highlight-color); /* Changed to red */
-    margin: 10px auto 0;
-    border-radius: 2px;
+    text-align: center;
 }
 
 .container {
@@ -288,7 +274,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 40px 20px;
 }
 
 .section-title {
@@ -306,7 +292,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .player-pathway-image {
@@ -365,32 +351,32 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-size: 16px;
 }
 
-/* Our Programs Styles */
+/* Tiles Container Styles */
 /* -------------------------------- */
-#our-programs .tiles-container {
+.tiles-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
-#our-programs .tile-title {
+.tile-title {
     text-align: center;
     font-size: 1.5em;
     color: #004080;
     margin-bottom: 5px;
 }
 
-#our-programs .tile-subtitle {
+.tile-subtitle {
     text-align: left;
     font-size: 1.2em;
     color: #ff0000;
     margin-bottom: 10px;
 }
 
-#our-programs .tile {
+.tile {
     background-color: var(--tile-bg-color);
     color: #004080;
     flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
@@ -400,26 +386,26 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    padding: 25px;
     box-sizing: border-box;
     transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
 }
 
-#our-programs .tile img {
+.tile img {
     width: 100%;
     height: auto;
     display: block;
     margin-bottom: 10px;
 }
 
-#our-programs .tile p {
+.tile p {
     text-align: left;
     font-size: 1em;
     color: #333;
     margin-bottom: 15px;
 }
 
-#our-programs .tile .cta-button {
+.tile .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -437,102 +423,16 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     box-sizing: border-box;
 }
 
-#our-programs .tile .cta-button i {
+.tile .cta-button i {
     margin-left: 5px;
     font-size: 14px;
 }
 
-#our-programs .tile .cta-button:hover {
-    background-color: var (--cta-hover-bg-color);
+.tile .cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
 }
 
-#our-programs .tile:hover {
-    transform: translateY(-10px); /* Increased hover transform effect */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
-}
-
-/* Our Facilities Styles */
-/* -------------------------------- */
-#facilities-tiles .tiles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
-}
-
-#facilities-tiles .tile-title {
-    text-align: center;
-    font-size: 1.5em;
-    color: #004080;
-    margin-bottom: 5px;
-}
-
-#facilities-tiles .tile-subtitle {
-    text-align: left;
-    font-size: 1.2em;
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-
-#facilities-tiles .tile {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjusted to fit 3 tiles per row */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
-}
-
-#facilities-tiles .tile img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-
-#facilities-tiles .tile p {
-    text-align: left;
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-#facilities-tiles .tile .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    background-color: var(--cta-bg-color);
-    color: #ffffff;
-    text-align: center;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
-    max-width: 90%;
-    box-sizing: border-box;
-}
-
-#facilities-tiles .tile .cta-button i {
-    margin-left: 5px;
-    font-size: 14px;
-}
-
-#facilities-tiles .tile .cta-button:hover {
-    background-color: var (--cta-hover-bg-color);
-}
-
-#facilities-tiles .tile:hover {
+.tile:hover {
     transform: translateY(-10px); /* Increased hover transform effect */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
 }
@@ -554,7 +454,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 80%; /* Adjusted width to 90% of the screen */
+    width: 70%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -592,7 +492,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: var(--cta-bg-color);
+    background-color: var (--cta-bg-color);
     color: #ffffff;
     text-align: center;
     margin: 10px auto;
@@ -611,7 +511,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 .event .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var (--cta-hover-bg-color);
 }
 
 .event:hover {
@@ -637,8 +537,8 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     background-color: var(--tile-bg-color);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    width: 90%; /* Adjusted width to 90% of the screen */
+    padding: 25px;
+    width: 60%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -710,7 +610,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%; /* Adjusted width to 90% of the screen */
+    width: 30%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -814,17 +714,14 @@ footer {
 .question::before {
     content: 'Q: ';
     font-weight: bold;
-    color: var(--cta-bg-color);
+    color: var (--cta-bg-color);
 }
 
 /* Responsive Design */
 /* -------------------------------- */
 @media (max-width: 1024px) {
-    #our-programs .tile {
-        flex: 1 1 calc(50% - 20px); /* 2 tiles per row on medium screens */
-    }
-    #facilities-tiles .tile {
-        flex: 1 1 calc(50% - 20px); /* 2 tiles per row on medium screens */
+    .tile {
+        flex: 1 1 calc(45% - 20px); /* Adjusted to fit 2 tiles per row on medium screens */
     }
 }
 
@@ -856,7 +753,7 @@ footer {
         display: flex;
     }
     .hero-section {
-        padding: 60px 10px;
+        padding: 100px 20px;
         height: 60vh;
     }
     .hero-section h1 {
