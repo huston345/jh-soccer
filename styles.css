@@ -584,13 +584,31 @@ section h1, section h2 {
     background-color: #fff;
     padding: 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 90%; /* Ensure the section takes up 90% of the screen width */
 }
 
 .partners-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.partners-container a {
+    flex: 1 1 calc(25% - 20px); /* Ensure logos fit nicely in the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .partners-container a img {
