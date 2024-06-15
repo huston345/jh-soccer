@@ -393,7 +393,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 #our-programs .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    flex: 1 1 calc(33.33% - 20px); /* Adjusted to fit 3 tiles per row */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
     overflow: hidden;
@@ -554,14 +554,14 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 70%; /* Adjusted width to 90% of the screen */
+    width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
+    flex: 1 1 calc(33.33% - 20px); /* Adjusted to fit 3 tiles per row */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -638,7 +638,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    width: 60%; /* Adjusted width to 90% of the screen */
+    width: 60%; /* Adjusted width to 60% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -710,7 +710,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 30%; /* Adjusted width to 90% of the screen */
+    width: 30%; /* Adjusted width to 30% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -820,10 +820,9 @@ footer {
 /* Responsive Design */
 /* -------------------------------- */
 @media (max-width: 1024px) {
-    #our-programs .tile {
-        flex: 1 1 calc(50% - 20px); /* 2 tiles per row on medium screens */
-    }
-    #facilities-tiles .tile {
+    #our-programs .tile, 
+    #facilities-tiles .tile, 
+    .events-container .event {
         flex: 1 1 calc(50% - 20px); /* 2 tiles per row on medium screens */
     }
 }
