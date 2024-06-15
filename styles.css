@@ -533,30 +533,46 @@ section h1, section h2 {
 /* Partners Section Styles */
 /* -------------------------------- */
 #partners {
-    background-color: #fff;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
-.partners-container {
+#partners h2 {
+    margin-bottom: 20px;
+}
+
+.partners-tile {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--tile-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 90%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
-.partners-container a img {
-    width: 150px;
-    height: 100px;
+.partner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Add some space between the logos */
+}
+
+.partner img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
+    max-width: 150px; /* Control the maximum width of the logos */
     transition: transform 0.3s, filter 0.3s;
 }
 
-.partners-container a img:hover {
+.partner img:hover {
     transform: scale(1.05);
     filter: brightness(1.2);
 }
-
 /* Footer Styles */
 /* -------------------------------- */
 footer {
