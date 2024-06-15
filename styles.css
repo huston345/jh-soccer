@@ -358,6 +358,7 @@ section h1, section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding: 0 20px; /* Added padding for better spacing */
 }
 
 .tile-title {
@@ -439,7 +440,6 @@ section h1, section h2 {
 /* -------------------------------- */
 #events {
     background-color: #fff;
-    padding: 20px;
     text-align: center;
     margin: 0 auto;
     max-width: 1200px; /* Add a maximum width */
@@ -473,7 +473,6 @@ section h1, section h2 {
 /* -------------------------------- */
 #contact {
     background-color: #fff;
-    padding: 20px;
     text-align: center;
     margin: 0 auto;
     max-width: 1200px; /* Add a maximum width */
