@@ -454,7 +454,7 @@ section h1, section h2 {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 90%; /* Adjusted width to 90% of the screen */
+    width: 70%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -538,7 +538,7 @@ section h1, section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%; /* Adjusted width to 90% of the screen */
+    width: 60%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -610,7 +610,7 @@ section h1, section h2 {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%; /* Adjusted width to 90% of the screen */
+    width: 30%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
