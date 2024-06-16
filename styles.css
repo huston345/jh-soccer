@@ -247,6 +247,18 @@ body {
     }
 }
 
+@media (min-width: 769px) {
+    .hero-section {
+        height: 70vh; /* Adjust this value as needed */
+    }
+    .hero-section h1 {
+        font-size: 48px;
+    }
+    .hero-section p {
+        font-size: 24px;
+    }
+}
+
 /* Main Content Styles */
 /* -------------------------------- */
 main {
