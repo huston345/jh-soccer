@@ -365,93 +365,92 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-size: 16px;
 }
 
-/* Tiles Container Styles /
-/ -------------------------------- /
+/* Tiles Container Styles */
+/* -------------------------------- */
 .tiles-container {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-justify-content: center;
-width: 90%; / Adjusted width to 90% of the screen /
-margin: 0 auto; / Center the container horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 90%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .tile-title {
-text-align: center;
-font-size: 1.5em;
-color: #004080;
-margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #004080;
+    margin-bottom: 5px;
 }
 
 .tile-subtitle {
-text-align: left;
-font-size: 1.2em;
-color: #ff0000;
-margin-bottom: 10px;
+    text-align: left;
+    font-size: 1.2em;
+    color: #ff0000;
+    margin-bottom: 10px;
 }
 
 .tile {
-background-color: var(--tile-bg-color);
-color: #004080;
-flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row /
-border-radius: 10px;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); / Enhanced shadow effect /
-overflow: hidden;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 15px;
-box-sizing: border-box;
-transition: transform 0.3s, box-shadow 0.3s; / Added transition */
+    background-color: var(--tile-bg-color);
+    color: #004080;
+    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
 }
 
 .tile img {
-width: 100%;
-height: auto;
-display: block;
-margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .tile p {
-text-align: left;
-font-size: 1em;
-color: #333;
-margin-bottom: 15px;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .tile .cta-button {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-padding: 8px 12px;
-background-color: var(--cta-bg-color);
-color: #ffffff;
-text-align: center;
-margin: 10px auto;
-border-radius: 5px;
-text-decoration: none;
-font-weight: bold;
-font-size: 14px;
-transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
-max-width: 90%;
-box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: var(--cta-bg-color);
+    color: #ffffff;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .tile .cta-button i {
-margin-left: 5px;
-font-size: 14px;
+    margin-left: 5px;
+    font-size: 14px;
 }
 
-.tile .cta-button
-{
-background-color: var(--cta-hover-bg-color);
+.tile .cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
 }
 
-.tile
-{
-transform: translateY(-10px); /* Increased hover transform effect /
-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); / Enhanced hover shadow effect */
+.tile:hover {
+    transform: translateY(-10px); /* Increased hover transform effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
 }
+
 /* Events Section Styles */
 /* -------------------------------- */
 #events {
