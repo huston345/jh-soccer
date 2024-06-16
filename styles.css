@@ -23,6 +23,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Header and Navbar Styles */
@@ -370,7 +371,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .tiles-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
@@ -506,7 +507,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: var (--cta-bg-color);
+    background-color: var(--cta-bg-color);
     color: #ffffff;
     text-align: center;
     margin: 10px auto;
@@ -525,7 +526,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 .event .cta-button:hover {
-    background-color: var (--cta-hover-bg-color);
+    background-color: var(--cta-hover-bg-color);
 }
 
 .event:hover {
@@ -648,6 +649,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     transform: scale(1.05);
     filter: brightness(1.2);
 }
+
 /* Footer Styles */
 /* -------------------------------- */
 footer {
