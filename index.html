@@ -278,6 +278,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+</
+<script>
+function showPhase(phaseId) {
+    const phases = document.querySelectorAll('.tile-content');
+    phases.forEach(phase => {
+        phase.classList.remove('active');
+    });
+    document.getElementById(phaseId).classList.add('active');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const navList = document.querySelector(".nav-list");
+    const navItems = document.querySelectorAll('.nav-item a');
+
+    hamburgerMenu.addEventListener("click", function() {
+        navList.classList.toggle("active");
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener("click", function() {
+            navList.classList.remove("active");
+        });
+    });
+});
 </script>
+script>
 </body>
 </html>
