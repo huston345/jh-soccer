@@ -1,3 +1,55 @@
+/* Player Pathway Styles */
+/* -------------------------------- */
+#player-pathway .tile-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#player-pathway .tile-button {
+    background-color: var(--cta-bg-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 33.33%; /* Each button takes up 33% of the width */
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#player-pathway .tile-button:hover {
+    background-color: var(--cta-hover-bg-color);
+}
+
+#player-pathway .tile-content {
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+#player-pathway .tile-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#player-pathway .stage-title {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#player-pathway .stage-text {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
 /* General Styles */
 :root {
     --main-bg-color: #f4f4f4;
