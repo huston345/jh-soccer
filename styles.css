@@ -1,16 +1,17 @@
-/* General Styles */
+/* Variables */
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
     --header-bg-color: #002b5c;
     --banner-bg-color: #004080;
-    --highlight-color: #ff0000; /* Changed to red */
+    --highlight-color: #ff0000;
     --cta-bg-color: #0073e6;
     --cta-hover-bg-color: #005bb5;
     --tile-bg-color: #ffffff;
     --tile-hover-bg-color: #005bb5;
 }
 
+/* Reset & General Styles */
 * {
     box-sizing: border-box;
 }
@@ -91,7 +92,7 @@ body {
 }
 
 .pipe {
-    color: #ff0000; /* Changed pipe color to red */
+    color: #ff0000;
     margin: 0 5px;
 }
 
@@ -265,7 +266,6 @@ body {
 }
 
 /* Main Content Styles */
-/* -------------------------------- */
 main {
     padding: 20px;
     padding-bottom: 80px;
@@ -302,7 +302,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Player Pathway Styles */
-/* -------------------------------- */
 #player-pathway .tile-header {
     display: flex;
     justify-content: center;
@@ -319,7 +318,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: 33.33%; /* Each button takes up 33% of the width */
+    width: 33.33%;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
@@ -345,16 +344,15 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 10px;
-    text-align: center; /* Center the stage title */
+    text-align: center;
 }
 
 #player-pathway .stage-text {
-    text-align: center; /* Center the text */
+    text-align: center;
     margin: 0 auto;
     max-width: 600px;
 }
 
-/* Active tile content */
 .tile-content.active {
     display: block;
 }
@@ -367,14 +365,13 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Tiles Container Styles */
-/* -------------------------------- */
 .tiles-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .tile-title {
@@ -394,16 +391,16 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjusted to fit 3 tiles per row */
+    flex: 1 1 calc(33.33% - 20px);
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
     box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tile img {
@@ -433,7 +430,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    transition: background-color 0.3s, transform 0.3s;
     max-width: 90%;
     box-sizing: border-box;
 }
@@ -448,12 +445,11 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 .tile:hover {
-    transform: translateY(-10px); /* Increased hover transform effect */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Events Section Styles */
-/* -------------------------------- */
 #events {
     text-align: center;
     padding: 20px;
@@ -469,14 +465,14 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
+    flex: 1 1 calc(50% - 20px);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -490,14 +486,14 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 
 .event h3 {
     margin: 0 0 10px;
-    text-align: center; /* Center title */
-    font-size: 1.5em; /* Consistent font size */
+    text-align: center;
+    font-size: 1.5em;
     color: #004080;
 }
 
 .event p {
     margin: 5px 0;
-    text-align: left; /* Left-align text */
+    text-align: left;
     font-size: 1em;
     color: #333;
 }
@@ -535,7 +531,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Contact Us Section Styles */
-/* -------------------------------- */
 #contact {
     text-align: center;
     padding: 20px;
@@ -553,8 +548,8 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -606,7 +601,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Partners Section Styles */
-/* -------------------------------- */
 #partners {
     text-align: center;
     padding: 20px;
@@ -624,8 +618,8 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .partner {
@@ -633,14 +627,14 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px; /* Add some space between the logos */
+    margin: 0 10px;
 }
 
 .partner img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-width: 150px; /* Control the maximum width of the logos */
+    max-width: 150px;
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -650,7 +644,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Footer Styles */
-/* -------------------------------- */
 footer {
     background-color: var(--header-bg-color);
     color: #ffffff;
@@ -700,7 +693,7 @@ footer {
 }
 
 .footer-social-icons a:hover {
-    transform: scale(1.2); /* Increase size on hover */
+    transform: scale(1.2);
 }
 
 .footer-text {
@@ -708,19 +701,18 @@ footer {
 }
 
 /* Responsive Design */
-/* -------------------------------- */
 @media only screen and (max-width: 1200px) {
     .tiles-container {
-        width: 95%; /* Adjusted width for smaller screens */
+        width: 95%;
     }
 
     .events-container {
-        width: 95%; /* Adjusted width for smaller screens */
+        width: 95%;
     }
 
     .contact-container,
     .partners-tile {
-        width: 95%; /* Adjusted width for smaller screens */
+        width: 95%;
     }
 }
 
@@ -729,12 +721,12 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 calc(100% - 20px); /* Adjusted to fit 1 tile per row on iPads */
+        flex: 1 1 calc(100% - 20px);
     }
 
     .tiles-container,
     .events-container {
-        justify-content: flex-start; /* Align tiles and events to the start */
+        justify-content: flex-start;
     }
 }
 
@@ -743,14 +735,14 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 calc(100% - 20px); /* Adjusted to fit 1 tile per row */
+        flex: 1 1 calc(100% - 20px);
     }
 
     .tiles-container,
     .events-container,
     .contact-container,
     .partners-tile {
-        width: 100%; /* Adjusted width for full width on smaller screens */
+        width: 100%;
     }
 
     .nav-list {
@@ -782,7 +774,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        padding: 15px; /* Reduced padding for smaller screens */
+        padding: 15px;
     }
 }
 
@@ -791,6 +783,6 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        padding: 10px; /* Further reduced padding for very small screens */
+        padding: 10px;
     }
 }
