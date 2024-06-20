@@ -229,20 +229,6 @@ body {
 
 .cta-button:hover {
     background-color: var(--cta-hover-bg-color);
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--cta-bg-color);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
 }
 
 @media (max-width: 768px) {
