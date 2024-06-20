@@ -377,7 +377,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .programs-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(33.33% - 20px);
+    flex: 1 1 90%;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -407,7 +407,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .facilities-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(33.33% - 20px);
+    flex: 1 1 90%;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -447,7 +447,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(50% - 20px);
+    flex: 1 1 90%;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -523,7 +523,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -531,7 +531,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 400px;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
 }
@@ -593,7 +593,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%;
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -682,7 +682,7 @@ footer {
     .events-container,
     .contact-container,
     .partners-tile {
-        width: 95%;
+        width: 90%;
     }
 }
 
@@ -691,13 +691,27 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 calc(100% - 20px);
+        flex: 1 1 90%;
     }
 
     .programs-tiles-container,
     .facilities-tiles-container,
     .events-container {
-        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .partners-tile {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .partner {
+        margin: 10px 0;
     }
 }
 
@@ -706,7 +720,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 calc(100% - 20px);
+        flex: 1 1 90%;
     }
 
     .programs-tiles-container,
@@ -714,7 +728,7 @@ footer {
     .events-container,
     .contact-container,
     .partners-tile {
-        width: 100%;
+        width: 90%;
     }
 
     .nav-list {
