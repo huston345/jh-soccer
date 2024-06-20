@@ -347,6 +347,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
 .stage-title {
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -394,7 +395,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    flex: 1 1 calc(33.33% - 20px); /* Adjusted to fit 3 tiles per row */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
     overflow: hidden;
