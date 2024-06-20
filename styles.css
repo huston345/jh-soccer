@@ -345,21 +345,20 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 10px;
+    text-align: center; /* Center the stage title */
 }
 
 #player-pathway .stage-text {
-    text-align: left;
+    text-align: center; /* Center the text */
     margin: 0 auto;
     max-width: 600px;
 }
-
 /* Join Us Section */
 .join-us-title,
 .join-us-section p {
     font-size: 16px;
     text-align: center;
 }
-
 
 /* Tiles Container Styles */
 /* -------------------------------- */
@@ -724,7 +723,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
+        flex: 1 1 calc(100% - 20px); /* Adjusted to fit 1 tile per row on iPads */
     }
 
     .tiles-container,
@@ -746,6 +745,29 @@ footer {
     .contact-container,
     .partners-tile {
         width: 100%; /* Adjusted width for full width on smaller screens */
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 }
 
