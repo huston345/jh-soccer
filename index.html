@@ -259,31 +259,38 @@
         </div>
         <p>&copy; 2024 J-Hawk Soccer Academy. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hamburgerMenu = document.querySelector(".hamburger-menu");
-            const navList = document.querySelector(".nav-list");
-            const navItems = document.querySelectorAll('.nav-item a');
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
+        const navItems = document.querySelectorAll('.nav-item a');
 
-            hamburgerMenu.addEventListener("click", function() {
-                navList.classList.toggle("active");
-            });
-
-            navItems.forEach(item => {
-                item.addEventListener("click", function() {
-                    navList.classList.remove("active");
-                });
-            });
+        hamburgerMenu.addEventListener("click", function() {
+            navList.classList.toggle("active");
         });
 
-        function togglePhase(phaseId) {
-            const phases = document.querySelectorAll('.tile-content');
-            phases.forEach(phase => phase.style.display = 'none');
-            const targetPhase = document.getElementById(phaseId);
-            if (targetPhase) {
-                targetPhase.style.display = 'block';
-            }
+        navItems.forEach(item => {
+            item.addEventListener("click", function() {
+                navList.classList.remove("active");
+            });
+        });
+    });
+
+    function togglePhase(phaseId) {
+        const phases = document.querySelectorAll('#player-pathway .tile-content');
+        phases.forEach(phase => phase.style.display = 'none');
+        const targetPhase = document.getElementById(phaseId);
+        if (targetPhase) {
+            targetPhase.style.display = 'block';
         }
-    </script>
+    }
+
+    document.querySelectorAll('#player-pathway .tile-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const phaseId = button.getAttribute('onclick').split("'")[1];
+            togglePhase(phaseId);
+        });
+    });
+</script>
 </body>
 </html>
