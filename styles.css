@@ -1,4 +1,4 @@
-* Variables */
+/* Variables */
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -92,7 +92,7 @@ body {
 }
 
 .pipe {
-    color: #ff0000;
+    color: var(--highlight-color);
     margin: 0 5px;
 }
 
@@ -167,13 +167,13 @@ body {
     color: #ffffff;
     text-align: center;
     width: 100%;
-    height: 60vh; /* Set a fixed height */
+    height: 60vh;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Ensure vertical stacking */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -226,7 +226,7 @@ body {
     transition: background-color 0.3s;
     position: relative;
     z-index: 2;
-    margin: 20px 0; /* Add margin to separate buttons */
+    margin: 20px 0;
 }
 
 .cta-button:hover {
@@ -236,7 +236,11 @@ body {
 /* Player Pathway Styles */
 #player-pathway {
     width: 90%;
-    margin: 0 auto; /* Center the section */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--tile-bg-color);
 }
 
 #player-pathway .tile-header {
@@ -278,7 +282,7 @@ body {
 
 #player-pathway .stage-title {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: var(--main-font-color);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -297,56 +301,6 @@ body {
 .tile-content .tile-button {
     margin: 0 auto;
     display: block;
-}
-
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--header-bg-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-
-    .hero-section {
-        padding: 60px 10px;
-        height: 60vh;
-    }
-    
-    .hero-section h1 {
-        font-size: 36px;
-    }
-    
-    .hero-section p {
-        font-size: 18px;
-    }
-
-    .hero-section .hero-logo,
-    .hero-section h1,
-    .hero-section p {
-        width: 100%; /* Ensure full width for stacking */
-        text-align: center;
-    }
-
-    #player-pathway .tile-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
 }
 
 /* Main Content Styles */
@@ -385,150 +339,53 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     padding: 0 20px;
 }
 
-/* Player Pathway Section Styles */
-#player-pathway {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
+/* Programs Tiles Container Styles */
+.programs-tiles-container,
+.facilities-tiles-container,
+.events-container,
+.contact-container,
+.partners-tile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
     width: 90%;
-    margin: 0 auto; /* Center the section */
-}
-
-/* Ensure section titles are outside the box */
-.section-title {
-    margin-top: 0;
-}
-
-/* Ensure buttons are centered in both mobile and desktop modes */
-.cta-button {
-    display: block;
     margin: 0 auto;
-    text-align: center;
 }
 
-@media (max-width: 768px) {
-    .cta-button {
-        width: 100%;
-    }
+.programs-tiles-container .tile,
+.facilities-tiles-container .tile,
+.events-container .event,
+.contact-container,
+.partners-tile {
+    background-color: var(--tile-bg-color);
+    color: #004080;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Fix thumbnails visibility */
+.programs-tiles-container .tile:hover,
+.facilities-tiles-container .tile:hover,
+.events-container .event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
 .tile img, .facilities-tiles-container img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* Tiles Container Styles for Our Programs */
-.programs-tiles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.programs-tiles-container .tile {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(25% - 20px); /* Adjust the width of each tile to 25% */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.programs-tiles-container .tile:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Tiles Container Styles for Our Facilities */
-.facilities-tiles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.facilities-tiles-container .tile {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile to 33.33% */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.facilities-tiles-container .tile:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-/* Events Section Styles */
-#events {
-    text-align: center;
-    padding: 20px;
-}
-
-#events h2 {
-    margin-bottom: 20px;
-}
-
-.events-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.event {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 25px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.event h3 {
-    margin: 0 0 10px;
-    text-align: center;
-    font-size: 1.5em;
-    color: #004080;
-}
-
-.event p {
-    margin: 5px 0;
-    text-align: left;
-    font-size: 1em;
-    color: #333;
-}
-
-.event .cta-button {
+.event .cta-button,
+.tile .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -546,42 +403,18 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     box-sizing: border-box;
 }
 
-.event .cta-button i {
+.event .cta-button i,
+.tile .cta-button i {
     margin-left: 5px;
     font-size: 14px;
 }
 
-.event .cta-button:hover {
+.event .cta-button:hover,
+.tile .cta-button:hover {
     background-color: var(--cta-hover-bg-color);
 }
 
-.event:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
 /* Contact Us Section Styles */
-#contact {
-    text-align: center;
-    padding: 20px;
-}
-
-#contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--tile-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    width: 60%;
-    margin: 0 auto;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -631,27 +464,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Partners Section Styles */
-#partners {
-    text-align: center;
-    padding: 20px;
-}
-
-#partners h2 {
-    margin-bottom: 20px;
-}
-
-.partners-tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--tile-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    width: 30%;
-    margin: 0 auto;
-}
-
 .partner {
     flex: 1;
     display: flex;
@@ -746,7 +558,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 45%; /* Adjust the width of each tile for tablets */
+        flex: 1 1 45%;
     }
 
     .programs-tiles-container,
@@ -775,7 +587,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 100%; /* Adjust the width of each tile for mobile */
+        flex: 1 1 100%;
     }
 
     .programs-tiles-container,
@@ -808,6 +620,35 @@ footer {
     .hamburger-menu {
         display: block;
     }
+
+    .hero-section {
+        padding: 60px 10px;
+        height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .hero-section .hero-logo,
+    .hero-section h1,
+    .hero-section p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #player-pathway .tile-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -827,34 +668,10 @@ footer {
         padding: 10px;
     }
 }
-/* Responsive Design for Mobile */
+
 @media only screen and (max-width: 768px) {
     .programs-tiles-container .tile,
     .facilities-tiles-container .tile {
-        flex: 1 1 100%; /* Adjust the width of each tile for mobile */
-    }
-}
-
-/* Add these styles to styles.css */
-
-/* Center buttons inside tiles */
-.cta-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Add border to player pathway section */
-#player-pathway {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-/* Ensure buttons are centered in both mobile and desktop modes */
-@media (max-width: 768px) {
-    .cta-button {
-        width: 100%;
+        flex: 1 1 100%;
     }
 }
