@@ -283,6 +283,26 @@
             });
             document.getElementById(phaseId).style.display = 'block';
         }
+/* Add this script to the end of your HTML file inside <script> tags */
+
+function togglePhase(phaseId) {
+    const phase = document.getElementById(phaseId);
+    const isVisible = phase.style.display === 'block';
+    const phases = document.querySelectorAll('.tile-content');
+    
+    phases.forEach(p => p.style.display = 'none');
+    
+    if (!isVisible) {
+        phase.style.display = 'block';
+    }
+}
+
+document.querySelectorAll('.tile-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const phaseId = button.getAttribute('onclick').split("'")[1];
+        togglePhase(phaseId);
+    });
+});
     </script>
 </body>
 </html>
