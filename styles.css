@@ -1,4 +1,4 @@
-/* Variables */
+* Variables */
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -233,6 +233,158 @@ body {
     background-color: var(--cta-hover-bg-color);
 }
 
+/* Player Pathway Styles */
+#player-pathway {
+    width: 90%;
+    margin: 0 auto; /* Center the section */
+}
+
+#player-pathway .tile-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#player-pathway .tile-button {
+    background-color: var(--cta-bg-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#player-pathway .tile-button:hover {
+    background-color: var(--cta-hover-bg-color);
+}
+
+#player-pathway .tile-content {
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+#player-pathway .tile-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#player-pathway .stage-title {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#player-pathway .stage-text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.tile-content.active {
+    display: block;
+}
+
+/* Center buttons inside tiles */
+.tile-content .tile-button {
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .hero-section {
+        padding: 60px 10px;
+        height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .hero-section .hero-logo,
+    .hero-section h1,
+    .hero-section p {
+        width: 100%; /* Ensure full width for stacking */
+        text-align: center;
+    }
+
+    #player-pathway .tile-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h1, section h2 {
+    color: var(--header-bg-color);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--highlight-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Player Pathway Section Styles */
 #player-pathway {
     border: 1px solid #ccc;
@@ -327,7 +479,6 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
-
 /* Events Section Styles */
 #events {
     text-align: center;
@@ -676,11 +827,34 @@ footer {
         padding: 10px;
     }
 }
-
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .programs-tiles-container .tile,
     .facilities-tiles-container .tile {
         flex: 1 1 100%; /* Adjust the width of each tile for mobile */
+    }
+}
+
+/* Add these styles to styles.css */
+
+/* Center buttons inside tiles */
+.cta-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Add border to player pathway section */
+#player-pathway {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Ensure buttons are centered in both mobile and desktop modes */
+@media (max-width: 768px) {
+    .cta-button {
+        width: 100%;
     }
 }
