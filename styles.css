@@ -386,7 +386,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .programs-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 90%;
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -416,7 +416,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .facilities-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 90%;
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -456,7 +456,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 90%;
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -700,7 +700,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 90%;
+        flex: 1 1 45%; /* Adjust the width of each tile for tablets */
     }
 
     .programs-tiles-container,
@@ -729,7 +729,7 @@ footer {
     .event,
     .contact-container,
     .partners-tile {
-        flex: 1 1 90%;
+        flex: 1 1 100%; /* Adjust the width of each tile for mobile */
     }
 
     .programs-tiles-container,
