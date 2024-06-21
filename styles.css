@@ -867,3 +867,28 @@ footer {
         flex: 1 1 100%; /* Adjust the width of each tile for mobile */
     }
 }
+
+/* Add these styles to styles.css */
+
+/* Center buttons inside tiles */
+.cta-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Add border to player pathway section */
+#player-pathway {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Ensure buttons are centered in both mobile and desktop modes */
+@media (max-width: 768px) {
+    .cta-button {
+        width: 100%;
+    }
+}
+
