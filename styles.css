@@ -386,7 +386,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .programs-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
+    flex: 1 1 calc(25% - 20px); /* Adjust the width of each tile to 25% */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -416,7 +416,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .facilities-tiles-container .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile */
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each tile to 33.33% */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -432,7 +432,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
-
 /* Events Section Styles */
 #events {
     text-align: center;
