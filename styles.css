@@ -163,7 +163,7 @@ body {
     color: #ffffff;
     text-align: center;
     width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    height: 70vh; /* Full viewport height */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
