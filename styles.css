@@ -1,3 +1,11 @@
+To make the hero background picture take up the full width of the screen without any borders and ensure the "play pathway" section content is centered on all screen sizes, you can adjust your CSS as follows:
+
+1. Ensure the hero section background image covers the entire width and height of the viewport.
+2. Center the "play pathway" section content.
+
+Here's the modified CSS:
+
+```css
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -163,8 +171,8 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 100px 20px;
-    width: 100%; /* Ensure full width */
-    height: 100vh; /* Set a maximum height for the hero section */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -325,12 +333,14 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     align-items: center;
     margin-bottom: 40px;
     width: 100%;
+    justify-content: center; /* Center content horizontally */
 }
 
 .stage-title {
     font-family: 'Roboto', sans-serif;
     color: #333;
     flex: 1;
+    text-align: center; /* Center text */
 }
 
 .stage-image {
@@ -342,8 +352,10 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 
 .stage-text {
     flex: 1;
+    text-align: center; /* Center text */
 }
 
+```css
 .join-us-title,
 .join-us-section p {
     font-size: 16px;
@@ -672,6 +684,7 @@ footer {
     transition: color 0.3s;
 }
 
+```css
 .footer-social-icons a:hover {
     color: var(--highlight-color);
 }
@@ -799,6 +812,7 @@ footer {
     }
     .pathway-stage {
         flex-direction: column;
+        align-items: center; /* Center content on small screens */
     }
     .stage-image {
         max-width: 80%;
@@ -814,3 +828,4 @@ footer {
         width: 30%; /* Set to 30% width on large screens */
     }
 }
+```
