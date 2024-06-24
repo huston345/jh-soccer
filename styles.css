@@ -10,6 +10,7 @@
     --tile-hover-bg-color: #005bb5;
 }
 
+/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,8 +21,12 @@
 html, body {
     height: 100%;
 }
-* {
-    box-sizing: border-box;
+
+/* Ensure parent containers have no margin or padding */
+main, .background-container {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 body {
