@@ -163,13 +163,13 @@ body {
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    padding: 100px 20px;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    margin: 0; /* Remove any margin */
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
 }
 
 .hero-section::before {
@@ -295,7 +295,15 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     padding: 20px;
     margin-bottom: 20px;
 }
-
+.player-pathway-section {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Full width */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
 .player-pathway-image {
     max-width: 100%;
     height: auto;
