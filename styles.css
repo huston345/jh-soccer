@@ -173,17 +173,15 @@ body {
 }
 
 .hero-section {
+    width: 100%; /* Adjust to prevent overflow */
+    height: 70vh;
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    width: 100vw; /* Full viewport width */
-    height: 70vh; /* Full viewport height */
-    box-sizing: border-box;
-    position: relative;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    margin: 0; /* Ensure no margin */
-    padding: 0; /* Ensure no padding */
 }
 
 .hero-section::before {
