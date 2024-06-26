@@ -1,3 +1,6 @@
+Here's the complete CSS with the necessary changes to ensure the `hero-section` and its background image cover the entire width without any extra space:
+
+```css
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -173,7 +176,7 @@ body {
 }
 
 .hero-section {
-    width: 100%; /* Adjust to prevent overflow */
+    width: 100%;
     height: 70vh;
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
@@ -182,6 +185,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative; /* Ensure it is relative for the ::before overlay */
 }
 
 .hero-section::before {
