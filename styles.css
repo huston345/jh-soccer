@@ -1,23 +1,14 @@
 :root {
-    --main-bg-color: #f4f4f4;
-    --main-font-color: #333;
-    --header-bg-color: #002b5c;
-    --banner-bg-color: #004080;
-    --highlight-color: #ff0000;
-    --cta-bg-color: #0073e6;
-    --cta-hover-bg-color: #005bb5;
-    --tile-bg-color: #ffffff;
-    --tile-hover-bg-color: #005bb5;
+    --main-bg-color: #f4f4f4;             /* Background color for the main page */
+    --main-font-color: #333;              /* Primary font color */
+    --header-bg-color: #002b5c;           /* Background color for the header */
+    --banner-bg-color: #004080;           /* Background color for the banner */
+    --highlight-color: #ff0000;           /* Highlight color for underlines and other accents */
+    --cta-bg-color: #0073e6;              /* Background color for call-to-action buttons */
+    --cta-hover-bg-color: #005bb5;        /* Hover background color for call-to-action buttons */
+    --tile-bg-color: #ffffff;             /* Background color for tiles */
+    --tile-hover-bg-color: #005bb5;       /* Hover background color for tiles */
 }
-
-/* Global Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 html, body {
     height: 100%;
 }
@@ -28,849 +19,843 @@ body {
     color: var(--main-font-color);
     overflow-x: hidden;
 }
-
-.header {
-    background-color: var(--header-bg-color);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+html, body {
+    height: 100%;                        /* Ensure the HTML and body take up the full height of the viewport */
 }
 
+body {
+    font-family: 'Open Sans', sans-serif; /* Set the primary font family */
+    background-color: var(--main-bg-color); /* Set the background color using the variable */
+    color: var(--main-font-color);       /* Set the font color using the variable */
+    overflow-x: hidden;                  /* Prevent horizontal scrolling */
+}
+.header {
+    background-color: var(--header-bg-color); /* Background color for the header */
+    padding: 10px 0;                          /* Padding for top and bottom of header */
+    position: sticky;                         /* Make the header stick to the top */
+    top: 0;                                   /* Stick to the top of the viewport */
+    z-index: 1000;                            /* Ensure the header is above other elements */
+}
 .banner {
-    background-color: var(--banner-bg-color);
-    color: #ffffff;
-    padding: 5px 0;
-    text-align: center;
-    font-size: 0.9em;
-    font-weight: bold;
-    border-bottom: 2px solid var(--highlight-color);
+    background-color: var(--banner-bg-color); /* Background color for the banner */
+    color: #ffffff;                           /* Text color */
+    text-align: center;                       /* Center the text */
+    font-size: 0.9em;                         /* Font size */
+    font-weight: bold;                        /* Font weight */
+    border-bottom: 2px solid var(--highlight-color); /* Bottom border with highlight color */
 }
 
 .banner a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: #ffffff;                           /* Link color */
+    text-decoration: none;                    /* Remove underline from links */
+    transition: color 0.3s;                   /* Smooth color transition */
 }
 
 .banner a:hover {
-    color: var(--highlight-color);
+    color: var(--highlight-color);            /* Change color on hover */
 }
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: space-between;           /* Space out items evenly */
+    align-items: center;                      /* Center items vertically */
+    max-width: 1200px;                        /* Maximum width for the navbar */
+    margin: 0 auto;                           /* Center the navbar horizontally */
+    padding: 0 20px;                          /* Padding on the sides */
 }
 
 .logo img {
-    height: 70px;
+    height: 70px;                             /* Logo height */
 }
 
 .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
+    list-style: none;                         /* Remove default list styling */
+    padding: 0;                               /* Remove padding */
+    margin: 0;                                /* Remove margin */
+    display: flex;                            /* Use flexbox for layout */
+    align-items: center;                      /* Center items vertically */
 }
 
 .nav-item {
-    margin: 0 10px;
-    font-size: 16px;
-    position: relative;
+    margin: 0 10px;                           /* Margin between nav items */
+    font-size: 16px;                          /* Font size for nav items */
+    position: relative;                       /* Position relative for dropdowns */
 }
 
 .pipe {
-    color: var(--highlight-color);
-    margin: 0 5px;
+    color: var(--highlight-color);            /* Pipe color */
+    margin: 0 5px;                            /* Margin around the pipe */
 }
 
 .nav-item a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;                    /* Remove underline from links */
+    color: #ffffff;                           /* Link color */
+    font-size: 16px;                          /* Font size */
+    padding: 10px 15px;                       /* Padding inside nav items */
+    display: block;                           /* Display as block for full clickable area */
+    transition: background-color 0.3s, color 0.3s; /* Smooth background and color transition */
 }
 
 .nav-item a:hover {
-    background-color: var(--cta-bg-color);
-    color: var(--highlight-color);
-    border-radius: 4px;
+    background-color: var(--cta-bg-color);    /* Background color on hover */
+    color: var(--highlight-color);            /* Text color on hover */
+    border-radius: 4px;                       /* Rounded corners on hover */
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--header-bg-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2000;
+    display: none;                            /* Hide dropdown content by default */
+    position: absolute;                       /* Absolute position for dropdown */
+    background-color: var(--header-bg-color); /* Background color for dropdown */
+    min-width: 160px;                         /* Minimum width for dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+    z-index: 2000;                            /* Ensure dropdown is above other elements */
 }
 
 .dropdown-content a {
-    color: #ffffff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    color: #ffffff;                           /* Link color in dropdown */
+    padding: 12px 16px;                       /* Padding inside dropdown items */
+    text-decoration: none;                    /* Remove underline from links */
+    display: block;                           /* Display as block for full clickable area */
+    text-align: left;                         /* Align text to the left */
 }
 
 .dropdown-content a:hover {
-    background-color: var(--cta-bg-color);
-    color: var(--highlight-color);
+    background-color: var(--cta-bg-color);    /* Background color on hover */
+    color: var(--highlight-color);            /* Text color on hover */
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block;                           /* Show dropdown content on hover */
 }
 
 .dropdown .dropbtn::after {
-    content: '\25BC';
-    color: #ffffff;
-    font-size: 12px;
-    margin-left: 5px;
-    vertical-align: middle;
+    content: '\25BC';                         /* Down arrow character */
+    color: #ffffff;                           /* Arrow color */
+    font-size: 12px;                          /* Arrow font size */
+    margin-left: 5px;                         /* Margin to the left of the arrow */
+    vertical-align: middle;                   /* Align vertically in the middle */
 }
 
 .social-icons {
-    display: flex;
-    align-items: center;
+    display: flex;                            /* Use flexbox for layout */
+    align-items: center;                      /* Center items vertically */
 }
 
 .social-icons a {
-    color: #ffffff;
-    margin-left: 10px;
-    font-size: 20px;
+    color: #ffffff;                           /* Icon color */
+    margin-left: 10px;                        /* Margin to the left of each icon */
+    font-size: 20px;                          /* Icon font size */
 }
 
 .social-icons a:hover {
-    color: var(--cta-bg-color);
+    color: var(--cta-bg-color);               /* Change icon color on hover */
 }
 
 .hamburger-menu {
-    display: none;
-    cursor: pointer;
+    display: none;                            /* Hide hamburger menu by default */
+    cursor: pointer;                          /* Change cursor to pointer on hover */
 }
 
 .hamburger-menu i {
-    font-size: 1.5em;
-    color: white;
+    font-size: 1.5em;                         /* Font size for hamburger icon */
+    color: white;                             /* Color for hamburger icon */
 }
-
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;              /* Stack navbar items vertically */
+    }
+    .nav-list {
+        flex-direction: column;              /* Stack nav items vertically */
+        width: 100%;                         /* Full width for nav list */
+    }
+    .nav-item {
+        text-align: center;                  /* Center text */
+        width: 100%;                         /* Full width for nav items */
+    }
+    .dropdown-content {
+        width: 100%;                         /* Full width for dropdown content */
+    }
+    .dropdown-content a {
+        text-align: center;                  /* Center text in dropdown */
+    }
+    .hamburger-menu {
+        display: block;                      /* Show hamburger menu */
+    }
+    .nav-list {
+        display: none;                       /* Hide nav list by default */
+    }
+    .nav-list.active {
+        display: flex;                       /* Show nav list when active */
+    }
+    .hero-section {
+        height: 70vh;                        /* Height of hero section */
+    }
+    .hero-section h1 {
+        font-size: 36px;                     /* Font size for hero heading */
+    }
+    .hero-section p {
+        font-size: 18px;                     /* Font size for hero paragraph */
+    }
+    .tiles-container {
+        flex-direction: column;              /* Stack tiles vertically */
+        align-items: center;                 /* Center tiles */
+    }
+    .tile {
+        width: 100%;                         /* Full width for tiles */
+        margin-bottom: 10px;                 /* Margin below tiles */
+    }
+    .partners-container {
+        flex-direction: column;              /* Stack partners vertically */
+    }
+    .social-icons {
+        justify-content: center;             /* Center social icons */
+    }
+    .contact-form {
+        width: 100%;                         /* Full width for contact form */
+        padding: 0 20px;                     /* Padding for contact form */
+    }
+    .contact-form button {
+        width: 100%;                         /* Full width for contact button */
+    }
+    .events-container {
+        flex-direction: column;              /* Stack events vertically */
+    }
+    .event {
+        margin: 0 auto;                      /* Center events */
+    }
+    .banner {
+        font-size: 0.8em;                    /* Font size for banner */
+    }
+    .cta-button {
+        width: 80%;                          /* Width for call-to-action buttons */
+        padding: 10px 0;                     /* Padding for call-to-action buttons */
+        font-size: 14px;                     /* Font size for call-to-action buttons */
+        text-align: center;                  /* Center text */
+        margin: 0 auto;                      /* Center call-to-action buttons */
+        display: block;                      /* Display as block */
+    }
+    .tile {
+        max-width: 100%;                     /* Full width for tiles */
+    }
+    .tile .cta-button {
+        width: 100%;                         /* Full width for call-to-action buttons */
+    }
+    .player-pathway-tile {
+        padding: 15px;                       /* Padding for player pathway tiles */
+    }
+    .player-pathway-text {
+        padding: 10px;                       /* Padding for player pathway text */
+    }
+    .pathway-stage {
+        flex-direction: column;              /* Stack pathway stages vertically */
+        align-items: center;                 /* Center pathway stages */
+    }
+    .stage-image {
+        max-width: 80%;                      /* Width for stage images */
+        margin: 0 auto 20px;                 /* Margin for stage images */
+    }
+}
 .hero-section {
-    width: 100%;
-    height: 70vh;
-    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
+    width: 100%; /* Full width */
+    height: 70vh; /* 70% of the viewport height */
+    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire area */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+    position: relative; /* Position relative for overlay */
 }
 
 .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 43, 92, 0.7);
-    z-index: 1;
+    content: ''; /* Empty content for the overlay */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 43, 92, 0.7); /* Blue overlay with opacity */
+    z-index: 1; /* Place below the content */
 }
 
 .hero-section .hero-logo {
-    width: 150px;
-    opacity: 0.5;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 20px;
+    width: 150px; /* Logo width */
+    opacity: 0.5; /* Logo opacity */
+    position: relative; /* Position relative to the overlay */
+    z-index: 2; /* Place above the overlay */
+    margin-bottom: 20px; /* Margin below the logo */
 }
 
 .hero-section h1 {
-    font-size: 48px;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 48px; /* Font size for the heading */
+    margin: 0; /* Remove margins */
+    position: relative; /* Position relative to the overlay */
+    z-index: 2; /* Place above the overlay */
+    color: #ffffff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
 .hero-section p {
-    font-size: 24px;
-    margin: 20px 0 0;
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px; /* Font size for the paragraph */
+    margin: 20px 0 0; /* Margin above the paragraph */
+    position: relative; /* Position relative to the overlay */
+    z-index: 2; /* Place above the overlay */
+    color: #ffffff; /* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--cta-bg-color);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    .nav-list {
-        flex-direction: column;
-        width: 100%;
-    }
-    .nav-item {
-        text-align: center;
-        width: 100%;
-    }
-    .dropdown-content {
-        width: 100%;
-    }
-    .dropdown-content a {
-        text-align: center;
-    }
-    .hamburger-menu {
-        display: block;
-    }
-    .nav-list {
-        display: none;
-    }
-    .nav-list.active {
-        display: flex;
-    }
-    .hero-section {
-        padding: 60px 10px;
-        height: 70vh;
-    }
-    .hero-section h1 {
-        font-size: 36px;
-    }
-    .hero-section p {
-        font-size: 18px;
-    }
-    .tiles-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .tile {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .partners-container {
-        flex-direction: column;
-    }
-    .social-icons {
-        justify-content: center;
-    }
-    .contact-form {
-        width: 100%;
-        padding: 0 20px;
-    }
-    .contact-form button {
-        width: 100%;
-    }
-    .events-container {
-        flex-direction: column;
-    }
-    .event {
-        margin: 0 auto;
-    }
-    .banner {
-        font-size: 0.8em;
-    }
-    .cta-button {
-        width: 80%;
-        padding: 10px 0;
-        font-size: 14px;
-        text-align: center;
-        margin: 0 auto;
-        display: block;
-    }
-    .tile {
-        max-width: 100%;
-    }
-    .tile .cta-button {
-        width: 100%;
-    }
-    .player-pathway-tile {
-        padding: 15px;
-    }
-    .player-pathway-text {
-        padding: 10px;
-    }
-    .pathway-stage {
-        flex-direction: column;
-        align-items: center;
-    }
-    .stage-image {
-        max-width: 80%;
-        margin: 0 auto 20px;
-    }
-}
-
-main {
-    padding: 20px;
-    padding-bottom: 80px;
-}
-
-.section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 10px;
-}
-
-.section-title {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: var(--header-bg-color);
-    margin-bottom: 40px;
-}
-
-.player-pathway-tile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-Continuing from `.player-pathway-section`:
-
-```css
 .player-pathway-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                   /* Center content horizontally */
+    align-items: center;                      /* Center content vertically */
+    text-align: center;                       /* Ensure text is centered */
+    width: 100%;                              /* Full width */
+    padding: 20px;                            /* Add some padding for spacing */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
 }
 
 .player-pathway-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    max-width: 100%;                          /* Maximum width for images */
+    height: auto;                             /* Maintain aspect ratio */
+    border-radius: 10px;                      /* Rounded corners */
 }
 
 .player-pathway-text {
-    padding: 20px;
-    text-align: center;
-    word-wrap: break-word;
+    padding: 20px;                            /* Padding around text */
+    text-align: center;                       /* Center text */
+    word-wrap: break-word;                    /* Ensure text wraps */
 }
 
 .pathway-title {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+    font-family: 'Roboto', sans-serif;        /* Font family for titles */
+    color: #333;                              /* Title color */
 }
 
 .pathway-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    color: #555;
-    margin-bottom: 40px;
-    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;     /* Font family for subtitles */
+    color: #555;                              /* Subtitle color */
+    margin-bottom: 40px;                      /* Margin below subtitle */
+    font-size: 24px;                          /* Font size for subtitle */
 }
 
 .pathway-stage {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 40px;
-    width: 100%;
-    justify-content: center;
+    display: flex;                            /* Use flexbox for layout */
+    flex-direction: row;                      /* Arrange items in a row */
+    align-items: center;                      /* Center items vertically */
+    margin-bottom: 40px;                      /* Margin below stage */
+    width: 100%;                              /* Full width */
+    justify-content: center;                  /* Center content horizontally */
 }
 
 .stage-title {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    flex: 1;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;        /* Font family for stage titles */
+    color: #333;                              /* Stage title color */
+    flex: 1;                                  /* Flex grow */
+    text-align: center;                       /* Center text */
 }
 
 .stage-image {
-    max-width: 50%;
-    height: auto;
-    border-radius: 10px;
-    margin: 0 20px;
+    max-width: 50%;                           /* Maximum width for stage images */
+    height: auto;                             /* Maintain aspect ratio */
+    border-radius: 10px;                      /* Rounded corners */
+    margin: 0 20px;                           /* Margin on sides of images */
 }
 
 .stage-text {
-    flex: 1;
-    text-align: center;
+    flex: 1;                                  /* Flex grow */
+    text-align: center;                       /* Center text */
 }
 
 .join-us-title,
 .join-us-section p {
-    font-size: 16px;
+    font-size: 16px;                          /* Font size for join us section */
 }
-
 .tiles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
+    display: flex;                            /* Use flexbox for layout */
+    flex-wrap: wrap;                          /* Allow items to wrap */
+    gap: 10px;                                /* Gap between items */
+    justify-content: center;                  /* Center items horizontally */
+    width: 90%;                               /* 90% width */
+    margin: 0 auto;                           /* Center the container horizontally */
 }
 
 .tile-title {
-    text-align: center;
-    font-size: 1.5em;
-    color: #004080;
-    margin-bottom: 5px;
+    text-align: center;                       /* Center text */
+    font-size: 1.5em;                         /* Font size for tile titles */
+    color: #004080;                           /* Tile title color */
+    margin-bottom: 5px;                       /* Margin below tile title */
 }
 
 .tile-subtitle {
-    text-align: left;
-    font-size: 1.2em;
-    color: #ff0000;
-    margin-bottom: 10px;
+    text-align: left;                         /* Left-align text */
+    font-size: 1.2em;                         /* Font size for tile subtitles */
+    color: #ff0000;                           /* Tile subtitle color */
+    margin-bottom: 10px;                      /* Margin below tile subtitle */
 }
 
 .tile {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(25% - 20px);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--tile-bg-color);   /* Tile background color */
+    color: #004080;                           /* Tile text color */
+    flex: 1 1 calc(25% - 20px);               /* Adjust to fit 4 tiles per row */
+    border-radius: 10px;                      /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden;                         /* Hide overflow */
+    display: flex;                            /* Use flexbox for layout */
+    flex-direction: column;                   /* Arrange items in a column */
+    justify-content: space-between;           /* Space items evenly */
+    padding: 15px;                            /* Padding inside tiles */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
 }
 
 .tile img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+    width: 100%;                              /* Full width for images */
+    height: auto;                             /* Maintain aspect ratio */
+    display: block;                           /* Display as block */
+    margin-bottom: 10px;                      /* Margin below images */
 }
 
 .tile p {
-    text-align: left;
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 15px;
+    text-align: left;                         /* Left-align text */
+    font-size: 1em;                           /* Font size for paragraphs */
+    color: #333;                              /* Paragraph text color */
+    margin-bottom: 15px;                      /* Margin below paragraphs */
 }
 
 .tile .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    background-color: var(--cta-bg-color);
-    color: #ffffff;
-    text-align: center;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s;
-    max-width: 90%;
-    box-sizing: border-box;
+    display: inline-flex;                     /* Inline-flex display */
+    align-items: center;                      /* Center items vertically */
+    justify-content: center;                  /* Center items horizontally */
+    padding: 8px 12px;                        /* Padding inside buttons */
+    background-color: var(--cta-bg-color);    /* Button background color */
+    color: #ffffff;                           /* Button text color */
+    text-align: center;                       /* Center text */
+    margin: 10px auto;                        /* Center button horizontally */
+    border-radius: 5px;                       /* Rounded corners */
+    text-decoration: none;                    /* Remove underline from links */
+    font-weight: bold;                        /* Bold text */
+    font-size: 14px;                          /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    max-width: 90%;                           /* Maximum width for buttons */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
 }
 
 .tile .cta-button i {
-    margin-left: 5px;
-    font-size: 14px;
+    margin-left: 5px;                         /* Margin to the left of icons */
+    font-size: 14px;                          /* Icon font size */
 }
 
 .tile .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var(--cta-hover-bg-color); /* Hover background color */
 }
 
 .tile:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);             /* Move up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
+}
+.facilities-tiles-container {
+    display: flex;                            /* Use flexbox for layout */
+    flex-wrap: wrap;                          /* Allow items to wrap */
+    gap: 10px;                                /* Gap between items */
+    justify-content: center;                  /* Center items horizontally */
+    width: 90%;                               /* 90% width */
+    margin: 0 auto;                           /* Center the container horizontally */
 }
 
+.facilities-tile {
+    background-color: var(--tile-bg-color);   /* Tile background color */
+    color: #004080;                           /* Tile text color */
+    flex: 1 1 calc(33.333% - 20px);           /* Adjust to fit 3 tiles per row */
+    border-radius: 10px;                      /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden;                         /* Hide overflow */
+    display: flex;                            /* Use flexbox for layout */
+    flex-direction: column;                   /* Arrange items in a column */
+    justify-content: space-between;           /* Space items evenly */
+    padding: 15px;                            /* Padding inside tiles */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.facilities-tile img {
+    width: 100%;                              /* Full width for images */
+    height: auto;                             /* Maintain aspect ratio */
+    display: block;                           /* Display as block */
+    margin-bottom: 10px;                      /* Margin below images */
+}
+
+.facilities-tile p {
+    text-align: left;                         /* Left-align text */
+    font-size: 1em;                           /* Font size for paragraphs */
+    color: #333;                              /* Paragraph text color */
+    margin-bottom: 15px;                      /* Margin below paragraphs */
+}
+
+.facilities-tile .cta-button {
+    display: inline-flex;                     /* Inline-flex display */
+    align-items: center;                      /* Center items vertically */
+    justify-content: center;                  /* Center items horizontally */
+    padding: 8px 12px;                        /* Padding inside buttons */
+    background-color: var(--cta-bg-color);    /* Button background color */
+    color: #ffffff;                           /* Button text color */
+    text-align: center;                       /* Center text */
+    margin: 10px auto;                        /* Center button horizontally */
+    border-radius: 5px;                       /* Rounded corners */
+    text-decoration: none;                    /* Remove underline from links */
+    font-weight: bold;                        /* Bold text */
+    font-size: 14px;                          /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    max-width: 90%;                           /* Maximum width for buttons */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+}
+
+.facilities-tile .cta-button i {
+    margin-left: 5px;                         /* Margin to the left of icons */
+    font-size: 14px;                          /* Icon font size */
+}
+
+.facilities-tile .cta-button:hover {
+    background-color: var(--cta-hover-bg-color); /* Hover background color */
+}
+
+.facilities-tile:hover {
+    transform: translateY(-10px);             /* Move up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
+}
 #events {
-    text-align: center;
-    padding: 20px;
+    text-align: center;                       /* Center the text */
+    padding: 20px;                            /* Padding for the events section */
 }
 
 #events h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px;                      /* Margin below the heading */
 }
 
 .events-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 90%;
-    margin: 0 auto;
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    align-items: center;                      /* Center items vertically */
+    flex-wrap: wrap;                          /* Allow items to wrap */
+    gap: 20px;                                /* Gap between items */
+    width: 90%;                               /* 90% width */
+    margin: 0 auto;                           /* Center the container horizontally */
 }
 
 .event {
-    background-color: var(--tile-bg-color);
-    color: #004080;
-    flex: 1 1 calc(50% - 20px);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 25px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--tile-bg-color);   /* Event background color */
+    color: #004080;                           /* Event text color */
+    flex: 1 1 calc(50% - 20px);               /* Adjust to fit 2 events per row */
+    border-radius: 10px;                      /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden;                         /* Hide overflow */
+    display: flex;                            /* Use flexbox for layout */
+    flex-direction: column;                   /* Arrange items in a column */
+    justify-content: space-between;           /* Space items evenly */
+    padding: 25px;                            /* Padding inside events */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
 }
 
 .event h3 {
-    margin: 0 0 10px;
-    text-align: center;
-    font-size: 1.5em;
-    color: #004080;
+    margin: 0 0 10px;                         /* Margin around the heading */
+    text-align: center;                       /* Center the heading */
+    font-size: 1.5em;                         /* Font size for the heading */
+    color: #004080;                           /* Heading color */
 }
 
 .event p {
-    margin: 5px 0;
-    text-align: left;
-    font-size: 1em;
-    color: #333;
+    margin: 5px 0;                            /* Margin around the paragraphs */
+    text-align: left;                         /* Left-align the text */
+    font-size: 1em;                           /* Font size for the paragraphs */
+    color: #333;                              /* Paragraph text color */
 }
 
 .event .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    background-color: var(--cta-bg-color);
-    color: #ffffff;
-    text-align: center;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s;
-    max-width: 90%;
-    box-sizing: border-box;
+    display: inline-flex;                     /* Inline-flex display */
+    align-items: center;                      /* Center items vertically */
+    justify-content: center;                  /* Center items horizontally */
+    padding: 8px 12px;                        /* Padding inside buttons */
+    background-color: var(--cta-bg-color);    /* Button background color */
+    color: #ffffff;                           /* Button text color */
+    text-align: center;                       /* Center text */
+    margin: 10px auto;                        /* Center button horizontally */
+    border-radius: 5px;                       /* Rounded corners */
+    text-decoration: none;                    /* Remove underline from links */
+    font-weight: bold;                        /* Bold text */
+    font-size: 14px;                          /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    max-width: 90%;                           /* Maximum width for buttons */
+    box-sizing: border-box;                   /* Include padding in the element's total width and height */
 }
 
 .event .cta-button i {
-    margin-left: 5px;
-    font-size: 14px;
+    margin-left: 5px;                         /* Margin to the left of icons */
+    font-size: 14px;                          /* Icon font size */
 }
 
 .event .cta-button:hover {
-    background-color: var(--cta-hover-bg-color);
+    background-color: var(--cta-hover-bg-color); /* Hover background color */
 }
 
 .event:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);             /* Move up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
 }
-
 #contact {
-    text-align: center;
-    padding: 20px;
+    text-align: center;                       /* Center the text */
+    padding: 20px;                            /* Padding for the contact section */
 }
 
 #contact h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px;                      /* Margin below the heading */
 }
 
 .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--tile-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    width: 90%;
-    margin: 0 auto;
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    align-items: center;                      /* Center items vertically */
+    background-color: var(--tile-bg-color);   /* Container background color */
+    border-radius: 10px;                      /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 15px;                            /* Padding inside container */
+    width: 90%;                               /* 90% width */
+    margin: 0 auto;                           /* Center the container horizontally */
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
+    display: flex;                            /* Use flexbox for layout */
+    flex-direction: column;                   /* Arrange items in a column */
+    gap: 10px;                                /* Gap between items */
+    max-width: 700px;                         /* Maximum width for the form */
+    margin: 0 auto;                           /* Center the form horizontally */
+    text-align: left;                         /* Left-align text */
 }
 
 .contact-form label {
-    text-align: left;
-    font-weight: bold;
+    text-align: left;                         /* Left-align labels */
+    font-weight: bold;                        /* Bold text for labels */
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 10px;                            /* Padding inside input and textarea */
+    border: 1px solid #ccc;                   /* Border for input and textarea */
+    border-radius: 5px;                       /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #999;
+    color: #999;                              /* Placeholder text color */
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--cta-bg-color);
-    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+    border-color: var(--cta-bg-color);        /* Border color on focus */
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5); /* Box shadow on focus */
 }
 
 .contact-form button {
-    align-self: center;
-    background-color: var(--cta-bg-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    align-self: center;                       /* Center the button */
+    background-color: var(--cta-bg-color);    /* Button background color */
+    color: #fff;                              /* Button text color */
+    border: none;                             /* Remove border */
+    padding: 10px 20px;                       /* Padding inside button */
+    border-radius: 5px;                       /* Rounded corners */
+    cursor: pointer;                          /* Change cursor to pointer on hover */
+    transition: background-color 0.3s;        /* Smooth transition effect */
 }
 
 .contact-form button:hover {
-    background-color: var(--cta-hover-bg-color);
-    color: var(--highlight-color);
+    background-color: var(--cta-hover-bg-color); /* Hover background color */
+    color: var(--highlight-color);              /* Hover text color */
 }
-
 #partners {
-    text-align: center;
-    padding: 20px;
+    text-align: center;                       /* Center the text */
+    padding: 20px;                            /* Padding for the partners section */
 }
 
 #partners h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px;                      /* Margin below the heading */
 }
 
 .partners-tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--tile-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    width: 90%;
-    margin: 0 auto;
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    align-items: center;                      /* Center items vertically */
+    background-color: var(--tile-bg-color);   /* Container background color */
+    border-radius: 10px;                      /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 25px;                            /* Padding inside container */
+    width: 90%;                               /* 90% width */
+    margin: 0 auto;                           /* Center the container horizontally */
 }
 
 .partner {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
+    flex: 1;                                  /* Flex grow */
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    align-items: center;                      /* Center items vertically */
+    margin: 0 10px;                           /* Margin on the sides */
 }
 
 .partner img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-width: 150px;
-    transition: transform 0.3s, filter 0.3s;
+    width: 100%;                              /* Full width for images */
+    height: auto;                             /* Maintain aspect ratio */
+    object-fit: contain;                      /* Contain within the given space */
+    max-width: 150px;                         /* Maximum width for images */
+    transition: transform 0.3s, filter 0.3s;  /* Smooth transition effects */
 }
 
 .partner img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
+    transform: scale(1.05);                   /* Scale up on hover */
+    filter: brightness(1.2);                  /* Brighten on hover */
 }
-
 footer {
-    background-color: var(--header-bg-color);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
+    background-color: var(--header-bg-color); /* Footer background color */
+    color: #ffffff;                           /* Footer text color */
+    text-align: center;                       /* Center the text */
+    padding: 20px 0;                          /* Padding for top and bottom */
+    position: relative;                       /* Position relative */
+    bottom: 0;                                /* Stick to the bottom */
+    width: 100%;                              /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    font-size: 14px;                          /* Font size */
 }
 
-Continuing from `.footer-nav-item`:
+.footer-nav {
+    list-style: none;                         /* Remove default list styling */
+    padding: 0;                               /* Remove padding */
+    margin: 0 0 10px;                         /* Margin below the list */
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    gap: 15px;                                /* Gap between items */
+}
 
-```css
 .footer-nav-item {
-    list-style: none;
+    list-style: none;                         /* Remove default list styling */
 }
 
 .footer-nav-item a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: #ffffff;                           /* Link color */
+    text-decoration: none;                    /* Remove underline from links */
+    transition: color 0.3s;                   /* Smooth transition effect */
 }
 
 .footer-nav-item a:hover {
-    color: var(--highlight-color);
+    color: var(--highlight-color);            /* Hover color */
 }
 
 .footer-social-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    margin-top: 10px;                         /* Margin above the social icons */
+    display: flex;                            /* Use flexbox for layout */
+    justify-content: center;                  /* Center items horizontally */
+    gap: 10px;                                /* Gap between items */
 }
 
 .footer-social-icons a {
-    color: #ffffff;
-    transition: color 0.3s;
+    color: #ffffff;                           /* Icon color */
+    transition: color 0.3s;                   /* Smooth transition effect */
 }
 
 .footer-social-icons a:hover {
-    color: var(--highlight-color);
+    color: var(--highlight-color);            /* Hover color */
 }
 
-.content-section {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    text-align: left;
+.footer-logo img {
+    width: 100px;                             /* Logo width */
+    margin-bottom: 10px;                      /* Margin below the logo */
 }
-
-.questions p, .program-details p {
-    margin: 5px 0;
-}
-
-.question {
-    font-weight: bold;
-    background-color: #e7f3fe;
-    border-left: 4px solid var(--cta-bg-color);
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.question::before {
-    content: 'Q: ';
-    font-weight: bold;
-    color: var(--cta-bg-color);
-}
-
-@media (max-width: 1024px) {
-    .tile {
-        flex: 1 1 calc(45% - 20px);
-    }
-}
-
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column;              /* Stack navbar items vertically */
     }
     .nav-list {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: column;              /* Stack nav items vertically */
+        width: 100%;                         /* Full width for nav list */
     }
     .nav-item {
-        text-align: center;
-        width: 100%;
+        text-align: center;                  /* Center text */
+        width: 100%;                         /* Full width for nav items */
     }
     .dropdown-content {
-        width: 100%;
+        width: 100%;                         /* Full width for dropdown content */
     }
     .dropdown-content a {
-        text-align: center;
+        text-align: center;                  /* Center text in dropdown */
     }
     .hamburger-menu {
-        display: block;
+        display: block;                      /* Show hamburger menu */
     }
     .nav-list {
-        display: none;
+        display: none;                       /* Hide nav list by default */
     }
     .nav-list.active {
-        display: flex;
+        display: flex;                       /* Show nav list when active */
     }
     .hero-section {
-        padding: 60px 10px;
-        height: 70vh;
+        height: 70vh;                        /* Height of hero section */
     }
     .hero-section h1 {
-        font-size: 36px;
+        font-size: 36px;                     /* Font size for hero heading */
     }
     .hero-section p {
-        font-size: 18px;
+        font-size: 18px;                     /* Font size for hero paragraph */
     }
     .tiles-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;              /* Stack tiles vertically */
+        align-items: center;                 /* Center tiles */
     }
     .tile {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 100%;                         /* Full width for tiles */
+        margin-bottom: 10px;                 /* Margin below tiles */
     }
     .partners-container {
-        flex-direction: column;
+        flex-direction: column;              /* Stack partners vertically */
     }
     .social-icons {
-        justify-content: center;
+        justify-content: center;             /* Center social icons */
     }
     .contact-form {
-        width: 100%;
-        padding: 0 20px;
+        width: 100%;                         /* Full width for contact form */
+        padding: 0 20px;                     /* Padding for contact form */
     }
     .contact-form button {
-        width: 100%;
+        width: 100%;                         /* Full width for contact button */
     }
     .events-container {
-        flex-direction: column;
+        flex-direction: column;              /* Stack events vertically */
     }
     .event {
-        margin: 0 auto;
+        margin: 0 auto;                      /* Center events */
     }
     .banner {
-        font-size: 0.8em;
+        font-size: 0.8em;                    /* Font size for banner */
     }
     .cta-button {
-        width: 80%;
-        padding: 10px 0;
-        font-size: 14px;
-        text-align: center;
-        margin: 0 auto;
-        display: block;
+        width: 80%;                          /* Width for call-to-action buttons */
+        font-size: 14px;                     /* Font size for call-to-action buttons */
+        text-align: center;                  /* Center text */
+        margin: 0 auto;                      /* Center call-to-action buttons */
+        display: block;                      /* Display as block */
     }
     .tile {
-        max-width: 100%;
+        max-width: 100%;                     /* Full width for tiles */
     }
     .tile .cta-button {
-        width: 100%;
+        width: 100%;                         /* Full width for call-to-action buttons */
     }
     .player-pathway-tile {
-        padding: 15px;
+        padding: 15px;                       /* Padding for player pathway tiles */
     }
     .player-pathway-text {
-        padding: 10px;
+        padding: 10px;                       /* Padding for player pathway text */
     }
     .pathway-stage {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;              /* Stack pathway stages vertically */
+        align-items: center;                 /* Center pathway stages */
     }
     .stage-image {
-        max-width: 80%;
-        margin: 0 auto 20px;
+        max-width: 80%;                      /* Width for stage images */
+        margin: 0 auto 20px;                 /* Margin for stage images */
     }
 }
+
