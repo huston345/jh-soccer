@@ -1,8 +1,3 @@
-Based on your preferences, here is the updated code for your page:
-
-### CSS
-
-```css
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -345,7 +340,6 @@ main {
     font-family: 'Roboto', sans-serif;
     color: var(--header-bg-color);
     margin-bottom: 40px;
-
 }
 
 .player-pathway-tile {
@@ -358,15 +352,20 @@ main {
     padding: 20px;
     margin-bottom: 20px;
 }
+
+Continuing from `.player-pathway-section`:
+
+```css
 .player-pathway-section {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Ensure text is centered */
-    width: 100%; /* Full width */
-    padding: 20px; /* Add some padding for spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 .player-pathway-image {
     max-width: 100%;
     height: auto;
@@ -397,14 +396,14 @@ main {
     align-items: center;
     margin-bottom: 40px;
     width: 100%;
-    justify-content: center; /* Center content horizontally */
+    justify-content: center;
 }
 
 .stage-title {
     font-family: 'Roboto', sans-serif;
     color: #333;
     flex: 1;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 .stage-image {
@@ -416,10 +415,9 @@ main {
 
 .stage-text {
     flex: 1;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
-```css
 .join-us-title,
 .join-us-section p {
     font-size: 16px;
@@ -430,8 +428,8 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .tile-title {
@@ -451,16 +449,16 @@ main {
 .tile {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    flex: 1 1 calc(25% - 20px);
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
     box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tile img {
@@ -490,7 +488,7 @@ main {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    transition: background-color 0.3s, transform 0.3s;
     max-width: 90%;
     box-sizing: border-box;
 }
@@ -505,8 +503,8 @@ main {
 }
 
 .tile:hover {
-    transform: translateY(-10px); /* Increased hover transform effect */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 #events {
@@ -524,14 +522,14 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .event {
     background-color: var(--tile-bg-color);
     color: #004080;
-    flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
+    flex: 1 1 calc(50% - 20px);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -545,14 +543,14 @@ main {
 
 .event h3 {
     margin: 0 0 10px;
-    text-align: center; /* Center title */
-    font-size: 1.5em; /* Consistent font size */
+    text-align: center;
+    font-size: 1.5em;
     color: #004080;
 }
 
 .event p {
     margin: 5px 0;
-    text-align: left; /* Left-align text */
+    text-align: left;
     font-size: 1em;
     color: #333;
 }
@@ -562,7 +560,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: var (--cta-bg-color);
+    background-color: var(--cta-bg-color);
     color: #ffffff;
     text-align: center;
     margin: 10px auto;
@@ -581,7 +579,7 @@ main {
 }
 
 .event .cta-button:hover {
-    background-color: var (--cta-hover-bg-color);
+    background-color: var(--cta-hover-bg-color);
 }
 
 .event:hover {
@@ -606,8 +604,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -676,8 +674,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 90%; /* Adjusted width to 90% of the screen */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .partner {
@@ -685,14 +683,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px; /* Add some space between the logos */
+    margin: 0 10px;
 }
 
 .partner img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-width: 150px; /* Control the maximum width of the logos */
+    max-width: 150px;
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -713,15 +711,9 @@ footer {
     font-size: 14px;
 }
 
-.footer-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
+Continuing from `.footer-nav-item`:
 
+```css
 .footer-nav-item {
     list-style: none;
 }
@@ -748,7 +740,6 @@ footer {
     transition: color 0.3s;
 }
 
-```css
 .footer-social-icons a:hover {
     color: var(--highlight-color);
 }
@@ -783,7 +774,7 @@ footer {
 
 @media (max-width: 1024px) {
     .tile {
-        flex: 1 1 calc(45% - 20px); /* Adjusted to fit 2 tiles per row on medium screens */
+        flex: 1 1 calc(45% - 20px);
     }
 }
 
@@ -816,7 +807,7 @@ footer {
     }
     .hero-section {
         padding: 60px 10px;
-        height: 60vh;
+        height: 70vh;
     }
     .hero-section h1 {
         font-size: 36px;
@@ -876,19 +867,10 @@ footer {
     }
     .pathway-stage {
         flex-direction: column;
-        align-items: center; /* Center content on small screens */
+        align-items: center;
     }
     .stage-image {
         max-width: 80%;
         margin: 0 auto 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .contact-container {
-        width: 60%; /* Set to 60% width on large screens */
-    }
-    .partners-tile {
-        width: 30%; /* Set to 30% width on large screens */
     }
 }
