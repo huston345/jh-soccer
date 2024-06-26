@@ -1,9 +1,14 @@
+Based on your preferences, here is the updated code for your page:
+
+### CSS
+
+```css
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
     --header-bg-color: #002b5c;
     --banner-bg-color: #004080;
-    --highlight-color: #ff0000; /* Changed to red */
+    --highlight-color: #ff0000;
     --cta-bg-color: #0073e6;
     --cta-hover-bg-color: #005bb5;
     --tile-bg-color: #ffffff;
@@ -22,17 +27,8 @@ html, body {
     height: 100%;
 }
 
-/* Ensure parent containers have no margin or padding */
-main, .background-container {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     overflow-x: hidden;
@@ -94,7 +90,7 @@ body {
 }
 
 .pipe {
-    color: #ff0000;
+    color: var(--highlight-color);
     margin: 0 5px;
 }
 
@@ -173,7 +169,7 @@ body {
 }
 
 .hero-section {
-    width: 100%; /* Adjust to prevent overflow */
+    width: 100%;
     height: 70vh;
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
@@ -181,7 +177,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    position: relative;
 }
 
 .hero-section::before {
@@ -237,9 +233,35 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+    .dropdown-content {
+        width: 100%;
+    }
+    .dropdown-content a {
+        text-align: center;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-list.active {
+        display: flex;
+    }
     .hero-section {
         padding: 60px 10px;
-        height: 60vh;
+        height: 70vh;
     }
     .hero-section h1 {
         font-size: 36px;
@@ -247,41 +269,69 @@ body {
     .hero-section p {
         font-size: 18px;
     }
+    .tiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tile {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .partners-container {
+        flex-direction: column;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .contact-form {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .contact-form button {
+        width: 100%;
+    }
+    .events-container {
+        flex-direction: column;
+    }
+    .event {
+        margin: 0 auto;
+    }
+    .banner {
+        font-size: 0.8em;
+    }
+    .cta-button {
+        width: 80%;
+        padding: 10px 0;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    .tile {
+        max-width: 100%;
+    }
+    .tile .cta-button {
+        width: 100%;
+    }
+    .player-pathway-tile {
+        padding: 15px;
+    }
+    .player-pathway-text {
+        padding: 10px;
+    }
+    .pathway-stage {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stage-image {
+        max-width: 80%;
+        margin: 0 auto 20px;
+    }
 }
 
 main {
     padding: 20px;
     padding-bottom: 80px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-section h1, section h2 {
-    color: var(--header-bg-color);
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: var(--highlight-color); /* Changed to red */
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .section {
@@ -295,6 +345,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     font-family: 'Roboto', sans-serif;
     color: var(--header-bg-color);
     margin-bottom: 40px;
+
 }
 
 .player-pathway-tile {
