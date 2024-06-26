@@ -11,6 +11,9 @@
 }
 html, body {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -19,16 +22,6 @@ body {
     color: var(--main-font-color);
     overflow-x: hidden;
 }
-html, body {
-    height: 100%;                        /* Ensure the HTML and body take up the full height of the viewport */
-    width: 100%;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif; /* Set the primary font family */
-    background-color: var(--main-bg-color); /* Set the background color using the variable */
-    color: var(--main-font-color);       /* Set the font color using the variable */
-    overflow-x: hidden;                  /* Prevent horizontal scrolling */
 }
 .header {
     background-color: var(--header-bg-color); /* Background color for the header */
