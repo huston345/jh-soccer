@@ -31,7 +31,7 @@ body {
 }
 .header {
     background-color: var(--header-bg-color); /* Background color for the header */
-    padding: 10px 0;                          /* Padding for top and bottom of header */
+    padding: 0px 0;                          /* Padding for top and bottom of header */
     position: sticky;                         /* Make the header stick to the top */
     top: 0;                                   /* Stick to the top of the viewport */
     z-index: 1000;                            /* Ensure the header is above other elements */
