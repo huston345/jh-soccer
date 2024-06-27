@@ -1,856 +1,847 @@
+/* General Styles */
+/* -------------------------------- */
 :root {
-    --main-bg-color: #f4f4f4;             /* Background color for the main page */
-    --main-font-color: #333;              /* Primary font color */
-    --header-bg-color: #002b5c;           /* Background color for the header */
-    --banner-bg-color: #004080;           /* Background color for the banner */
-    --highlight-color: #ff0000;           /* Highlight color for underlines and other accents */
-    --cta-bg-color: #0073e6;              /* Background color for call-to-action buttons */
-    --cta-hover-bg-color: #005bb5;        /* Hover background color for call-to-action buttons */
-    --tile-bg-color: #ffffff;             /* Background color for tiles */
-    --tile-hover-bg-color: #005bb5;       /* Hover background color for tiles */
+    --main-bg-color: #f4f4f4;
+    --main-font-color: #333;
+    --header-bg-color: #002b5c;
+    --banner-bg-color: #004080;
+    --highlight-color: #ff0000; /* Changed to red */
+    --cta-bg-color: #0073e6;
+    --cta-hover-bg-color: #005bb5;
+    --tile-bg-color: #ffffff;
+    --tile-hover-bg-color: #005bb5;
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     overflow-x: hidden;
 }
-}
+
+/* Header and Navbar Styles */
+/* -------------------------------- */
 .header {
-    background-color: var(--header-bg-color); /* Background color for the header */
-    padding: 0px 0;                          /* Padding for top and bottom of header */
-    position: sticky;                         /* Make the header stick to the top */
-    top: 0;                                   /* Stick to the top of the viewport */
-    z-index: 1000;                            /* Ensure the header is above other elements */
-	width; 100%;
+    background-color: var(--header-bg-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 .banner {
-    background-color: var(--banner-bg-color); /* Background color for the banner */
-    color: #ffffff;                           /* Text color */
-    text-align: center;                       /* Center the text */
-    font-size: 0.9em;                         /* Font size */
-    font-weight: bold;                        /* Font weight */
-    border-bottom: 2px solid var(--highlight-color); /* Bottom border with highlight color */
+    background-color: var(--banner-bg-color);
+    color: #ffffff;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-bottom: 2px solid var(--highlight-color);
 }
 
 .banner a {
-    color: #ffffff;                           /* Link color */
-    text-decoration: none;                    /* Remove underline from links */
-    transition: color 0.3s;                   /* Smooth color transition */
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .banner a:hover {
-    color: var(--highlight-color);            /* Change color on hover */
+    color: var(--highlight-color);
 }
+
 .navbar {
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: space-between;           /* Space out items evenly */
-    align-items: center;                      /* Center items vertically */
-    max-width: 1200px;                        /* Maximum width for the navbar */
-    margin: 0 auto;                           /* Center the navbar horizontally */
-    padding: 0 20px;                          /* Padding on the sides */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo img {
-    height: 70px;                             /* Logo height */
+    height: 70px;
+}
+
+.nav-search {
+    display: none;
 }
 
 .nav-list {
-    list-style: none;                         /* Remove default list styling */
-    padding: 0;                               /* Remove padding */
-    margin: 0;                                /* Remove margin */
-    display: flex;                            /* Use flexbox for layout */
-    align-items: center;                      /* Center items vertically */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav-item {
-    margin: 0 10px;                           /* Margin between nav items */
-    font-size: 16px;                          /* Font size for nav items */
-    position: relative;                       /* Position relative for dropdowns */
+    margin: 0 10px;
+    font-size: 16px;
+    position: relative;
 }
 
 .pipe {
-    color: var(--highlight-color);            /* Pipe color */
-    margin: 0 5px;                            /* Margin around the pipe */
+    color: #ff0000;
+    margin: 0 5px;
 }
 
 .nav-item a {
-    text-decoration: none;                    /* Remove underline from links */
-    color: #ffffff;                           /* Link color */
-    font-size: 16px;                          /* Font size */
-    padding: 10px 15px;                       /* Padding inside nav items */
-    display: block;                           /* Display as block for full clickable area */
-    transition: background-color 0.3s, color 0.3s; /* Smooth background and color transition */
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item a:hover {
-    background-color: var(--cta-bg-color);    /* Background color on hover */
-    color: var(--highlight-color);            /* Text color on hover */
-    border-radius: 4px;                       /* Rounded corners on hover */
+    background-color: var(--cta-bg-color);
+    color: var(--highlight-color);
+    border-radius: 4px;
 }
 
 .dropdown-content {
-    display: none;                            /* Hide dropdown content by default */
-    position: absolute;                       /* Absolute position for dropdown */
-    background-color: var(--header-bg-color); /* Background color for dropdown */
-    min-width: 160px;                         /* Minimum width for dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
-    z-index: 2000;                            /* Ensure dropdown is above other elements */
+    display: none;
+    position: absolute;
+    background-color: var(--header-bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2000;
 }
 
 .dropdown-content a {
-    color: #ffffff;                           /* Link color in dropdown */
-    padding: 12px 16px;                       /* Padding inside dropdown items */
-    text-decoration: none;                    /* Remove underline from links */
-    display: block;                           /* Display as block for full clickable area */
-    text-align: left;                         /* Align text to the left */
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-    background-color: var(--cta-bg-color);    /* Background color on hover */
-    color: var(--highlight-color);            /* Text color on hover */
+    background-color: var(--cta-bg-color);
+    color: var(--highlight-color);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;                           /* Show dropdown content on hover */
+    display: block;
 }
 
 .dropdown .dropbtn::after {
-    content: '\25BC';                         /* Down arrow character */
-    color: #ffffff;                           /* Arrow color */
-    font-size: 12px;                          /* Arrow font size */
-    margin-left: 5px;                         /* Margin to the left of the arrow */
-    vertical-align: middle;                   /* Align vertically in the middle */
+    content: '\25BC';
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 .social-icons {
-    display: flex;                            /* Use flexbox for layout */
-    align-items: center;                      /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .social-icons a {
-    color: #ffffff;                           /* Icon color */
-    margin-left: 10px;                        /* Margin to the left of each icon */
-    font-size: 20px;                          /* Icon font size */
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 .social-icons a:hover {
-    color: var(--cta-bg-color);               /* Change icon color on hover */
+    color: var(--cta-bg-color);
 }
 
 .hamburger-menu {
-    display: none;                            /* Hide hamburger menu by default */
-    cursor: pointer;                          /* Change cursor to pointer on hover */
+    display: none;
+    cursor: pointer;
 }
 
 .hamburger-menu i {
-    font-size: 1.5em;                         /* Font size for hamburger icon */
-    color: white;                             /* Color for hamburger icon */
+    font-size: 1.5em;
+    color: white;
 }
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;              /* Stack navbar items vertically */
-    }
-    .nav-list {
-        flex-direction: column;              /* Stack nav items vertically */
-        width: 100%;                         /* Full width for nav list */
-    }
-    .nav-item {
-        text-align: center;                  /* Center text */
-        width: 100%;                         /* Full width for nav items */
-    }
-    .dropdown-content {
-        width: 100%;                         /* Full width for dropdown content */
-    }
-    .dropdown-content a {
-        text-align: center;                  /* Center text in dropdown */
-    }
-    .hamburger-menu {
-        display: block;                      /* Show hamburger menu */
-    }
-    .nav-list {
-        display: none;                       /* Hide nav list by default */
-    }
-    .nav-list.active {
-        display: flex;                       /* Show nav list when active */
-    }
-    .hero-section {
-        height: 70vh;                        /* Height of hero section */
-    }
-    .hero-section h1 {
-        font-size: 36px;                     /* Font size for hero heading */
-    }
-    .hero-section p {
-        font-size: 18px;                     /* Font size for hero paragraph */
-    }
-    .tiles-container {
-        flex-direction: column;              /* Stack tiles vertically */
-        align-items: center;                 /* Center tiles */
-    }
-    .tile {
-        width: 100%;                         /* Full width for tiles */
-        margin-bottom: 10px;                 /* Margin below tiles */
-    }
-    .partners-container {
-        flex-direction: column;              /* Stack partners vertically */
-    }
-    .social-icons {
-        justify-content: center;             /* Center social icons */
-    }
-    .contact-form {
-        width: 100%;                         /* Full width for contact form */
-        padding: 0 20px;                     /* Padding for contact form */
-    }
-    .contact-form button {
-        width: 100%;                         /* Full width for contact button */
-    }
-    .events-container {
-        flex-direction: column;              /* Stack events vertically */
-    }
-    .event {
-        margin: 0 auto;                      /* Center events */
-    }
-    .banner {
-        font-size: 0.8em;                    /* Font size for banner */
-    }
-    .cta-button {
-        width: 80%;                          /* Width for call-to-action buttons */
-        padding: 10px 0;                     /* Padding for call-to-action buttons */
-        font-size: 14px;                     /* Font size for call-to-action buttons */
-        text-align: center;                  /* Center text */
-        margin: 0 auto;                      /* Center call-to-action buttons */
-        display: block;                      /* Display as block */
-    }
-    .tile {
-        max-width: 100%;                     /* Full width for tiles */
-    }
-    .tile .cta-button {
-        width: 100%;                         /* Full width for call-to-action buttons */
-    }
-    .player-pathway-tile {
-        padding: 15px;                       /* Padding for player pathway tiles */
-    }
-    .player-pathway-text {
-        padding: 10px;                       /* Padding for player pathway text */
-    }
-    .pathway-stage {
-        flex-direction: column;              /* Stack pathway stages vertically */
-        align-items: center;                 /* Center pathway stages */
-    }
-    .stage-image {
-        max-width: 80%;                      /* Width for stage images */
-        margin: 0 auto 20px;                 /* Margin for stage images */
-    }
-}
+
+/* Hero Section Styles */
+/* -------------------------------- */
 .hero-section {
-    width: 100%; /* Full width */
-    height: 70vh; /* 70% of the viewport height */
-    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center; /* Background image */
-    background-size: cover; /* Cover the entire area */
-    color: #ffffff; /* Text color */
-    text-align: center; /* Center the text */
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
-    position: relative; /* Position relative for overlay */
+    background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%; /* Ensure full width */
+    height: 100vh; /* Set a maximum height for the hero section */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Remove any margin */
 }
 
 .hero-section::before {
-    content: ''; /* Empty content for the overlay */
-    position: absolute; /* Absolute positioning */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background: rgba(0, 43, 92, 0.7); /* Blue overlay with opacity */
-    z-index: 1; /* Place below the content */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 43, 92, 0.7);
+    z-index: 1;
 }
 
 .hero-section .hero-logo {
-    width: 150px; /* Logo width */
-    opacity: 0.5; /* Logo opacity */
-    position: relative; /* Position relative to the overlay */
-    z-index: 2; /* Place above the overlay */
-    margin-bottom: 20px; /* Margin below the logo */
+    width: 150px;
+    opacity: 0.5;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
 }
 
 .hero-section h1 {
-    font-size: 48px; /* Font size for the heading */
-    margin: 0; /* Remove margins */
-    position: relative; /* Position relative to the overlay */
-    z-index: 2; /* Place above the overlay */
-    color: #ffffff; /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+    font-size: 48px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section p {
-    font-size: 24px; /* Font size for the paragraph */
-    margin: 20px 0 0; /* Margin above the paragraph */
-    position: relative; /* Position relative to the overlay */
-    z-index: 2; /* Place above the overlay */
-    color: #ffffff; /* Text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
+    font-size: 24px;
+    margin: 20px 0 0;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-.player-pathway-section {
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                   /* Center content horizontally */
-    align-items: center;                      /* Center content vertically */
-    text-align: center;                       /* Ensure text is centered */
-    width: 100%;                              /* Full width */
-    padding: 20px;                            /* Add some padding for spacing */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cta-bg-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-hover-bg-color);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 10px;
+        height: 60vh;
+    }
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .hero-section p {
+        font-size: 18px;
+    }
+}
+
+/* Main Content Styles */
+/* -------------------------------- */
+main {
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h1, section h2 {
+    color: var(--header-bg-color);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--highlight-color); /* Changed to red */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Player Pathway Styles */
+/* -------------------------------- */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--header-bg-color);
+    margin-bottom: 40px;
+}
+
+.player-pathway-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .player-pathway-image {
-    max-width: 100%;                          /* Maximum width for images */
-    height: auto;                             /* Maintain aspect ratio */
-    border-radius: 10px;                      /* Rounded corners */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .player-pathway-text {
-    padding: 20px;                            /* Padding around text */
-    text-align: center;                       /* Center text */
-    word-wrap: break-word;                    /* Ensure text wraps */
+    padding: 20px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .pathway-title {
-    font-family: 'Roboto', sans-serif;        /* Font family for titles */
-    color: #333;                              /* Title color */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
 .pathway-subtitle {
-    font-family: 'Open Sans', sans-serif;     /* Font family for subtitles */
-    color: #555;                              /* Subtitle color */
-    margin-bottom: 40px;                      /* Margin below subtitle */
-    font-size: 24px;                          /* Font size for subtitle */
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 24px;
 }
 
 .pathway-stage {
-    display: flex;                            /* Use flexbox for layout */
-    flex-direction: row;                      /* Arrange items in a row */
-    align-items: center;                      /* Center items vertically */
-    margin-bottom: 40px;                      /* Margin below stage */
-    width: 100%;                              /* Full width */
-    justify-content: center;                  /* Center content horizontally */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .stage-title {
-    font-family: 'Roboto', sans-serif;        /* Font family for stage titles */
-    color: #333;                              /* Stage title color */
-    flex: 1;                                  /* Flex grow */
-    text-align: center;                       /* Center text */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    flex: 1;
 }
 
 .stage-image {
-    max-width: 50%;                           /* Maximum width for stage images */
-    height: auto;                             /* Maintain aspect ratio */
-    border-radius: 10px;                      /* Rounded corners */
-    margin: 0 20px;                           /* Margin on sides of images */
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
 }
 
 .stage-text {
-    flex: 1;                                  /* Flex grow */
-    text-align: center;                       /* Center text */
+    flex: 1;
 }
 
+/* Join Us Section */
+/* -------------------------------- */
 .join-us-title,
 .join-us-section p {
-    font-size: 16px;                          /* Font size for join us section */
+    font-size: 16px;
 }
+
+/* Tiles Container Styles */
+/* -------------------------------- */
 .tiles-container {
-    display: flex;                            /* Use flexbox for layout */
-    flex-wrap: wrap;                          /* Allow items to wrap */
-    gap: 10px;                                /* Gap between items */
-    justify-content: center;                  /* Center items horizontally */
-    width: 90%;                               /* 90% width */
-    margin: 0 auto;                           /* Center the container horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 90%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .tile-title {
-    text-align: center;                       /* Center text */
-    font-size: 1.5em;                         /* Font size for tile titles */
-    color: #004080;                           /* Tile title color */
-    margin-bottom: 5px;                       /* Margin below tile title */
+    text-align: center;
+    font-size: 1.5em;
+    color: #004080;
+    margin-bottom: 5px;
 }
 
 .tile-subtitle {
-    text-align: left;                         /* Left-align text */
-    font-size: 1.2em;                         /* Font size for tile subtitles */
-    color: #ff0000;                           /* Tile subtitle color */
-    margin-bottom: 10px;                      /* Margin below tile subtitle */
+    text-align: left;
+    font-size: 1.2em;
+    color: #ff0000;
+    margin-bottom: 10px;
 }
 
 .tile {
-    background-color: var(--tile-bg-color);   /* Tile background color */
-    color: #004080;                           /* Tile text color */
-    flex: 1 1 calc(25% - 20px);               /* Adjust to fit 4 tiles per row */
-    border-radius: 10px;                      /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    overflow: hidden;                         /* Hide overflow */
-    display: flex;                            /* Use flexbox for layout */
-    flex-direction: column;                   /* Arrange items in a column */
-    justify-content: space-between;           /* Space items evenly */
-    padding: 15px;                            /* Padding inside tiles */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    background-color: var(--tile-bg-color);
+    color: #004080;
+    flex: 1 1 calc(25% - 20px); /* Adjusted to fit 4 tiles per row */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
 }
 
 .tile img {
-    width: 100%;                              /* Full width for images */
-    height: auto;                             /* Maintain aspect ratio */
-    display: block;                           /* Display as block */
-    margin-bottom: 10px;                      /* Margin below images */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .tile p {
-    text-align: left;                         /* Left-align text */
-    font-size: 1em;                           /* Font size for paragraphs */
-    color: #333;                              /* Paragraph text color */
-    margin-bottom: 15px;                      /* Margin below paragraphs */
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .tile .cta-button {
-    display: inline-flex;                     /* Inline-flex display */
-    align-items: center;                      /* Center items vertically */
-    justify-content: center;                  /* Center items horizontally */
-    padding: 8px 12px;                        /* Padding inside buttons */
-    background-color: var(--cta-bg-color);    /* Button background color */
-    color: #ffffff;                           /* Button text color */
-    text-align: center;                       /* Center text */
-    margin: 10px auto;                        /* Center button horizontally */
-    border-radius: 5px;                       /* Rounded corners */
-    text-decoration: none;                    /* Remove underline from links */
-    font-weight: bold;                        /* Bold text */
-    font-size: 14px;                          /* Font size */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
-    max-width: 90%;                           /* Maximum width for buttons */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: var(--cta-bg-color);
+    color: #ffffff;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .tile .cta-button i {
-    margin-left: 5px;                         /* Margin to the left of icons */
-    font-size: 14px;                          /* Icon font size */
+    margin-left: 5px;
+    font-size: 14px;
 }
 
 .tile .cta-button:hover {
-    background-color: var(--cta-hover-bg-color); /* Hover background color */
+    background-color: var(--cta-hover-bg-color);
 }
 
 .tile:hover {
-    transform: translateY(-10px);             /* Move up on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
-}
-.facilities-tiles-container {
-    display: flex;                            /* Use flexbox for layout */
-    flex-wrap: wrap;                          /* Allow items to wrap */
-    gap: 10px;                                /* Gap between items */
-    justify-content: center;                  /* Center items horizontally */
-    width: 90%;                               /* 90% width */
-    margin: 0 auto;                           /* Center the container horizontally */
+    transform: translateY(-10px); /* Increased hover transform effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow effect */
 }
 
-.facilities-tile {
-    background-color: var(--tile-bg-color);   /* Tile background color */
-    color: #004080;                           /* Tile text color */
-    flex: 1 1 calc(33.333% - 20px);           /* Adjust to fit 3 tiles per row */
-    border-radius: 10px;                      /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    overflow: hidden;                         /* Hide overflow */
-    display: flex;                            /* Use flexbox for layout */
-    flex-direction: column;                   /* Arrange items in a column */
-    justify-content: space-between;           /* Space items evenly */
-    padding: 15px;                            /* Padding inside tiles */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
-}
-
-.facilities-tile img {
-    width: 100%;                              /* Full width for images */
-    height: auto;                             /* Maintain aspect ratio */
-    display: block;                           /* Display as block */
-    margin-bottom: 10px;                      /* Margin below images */
-}
-
-.facilities-tile p {
-    text-align: left;                         /* Left-align text */
-    font-size: 1em;                           /* Font size for paragraphs */
-    color: #333;                              /* Paragraph text color */
-    margin-bottom: 15px;                      /* Margin below paragraphs */
-}
-
-.facilities-tile .cta-button {
-    display: inline-flex;                     /* Inline-flex display */
-    align-items: center;                      /* Center items vertically */
-    justify-content: center;                  /* Center items horizontally */
-    padding: 8px 12px;                        /* Padding inside buttons */
-    background-color: var(--cta-bg-color);    /* Button background color */
-    color: #ffffff;                           /* Button text color */
-    text-align: center;                       /* Center text */
-    margin: 10px auto;                        /* Center button horizontally */
-    border-radius: 5px;                       /* Rounded corners */
-    text-decoration: none;                    /* Remove underline from links */
-    font-weight: bold;                        /* Bold text */
-    font-size: 14px;                          /* Font size */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
-    max-width: 90%;                           /* Maximum width for buttons */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
-}
-
-.facilities-tile .cta-button i {
-    margin-left: 5px;                         /* Margin to the left of icons */
-    font-size: 14px;                          /* Icon font size */
-}
-
-.facilities-tile .cta-button:hover {
-    background-color: var(--cta-hover-bg-color); /* Hover background color */
-}
-
-.facilities-tile:hover {
-    transform: translateY(-10px);             /* Move up on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
-}
+/* Events Section Styles */
+/* -------------------------------- */
 #events {
-    text-align: center;                       /* Center the text */
-    padding: 20px;                            /* Padding for the events section */
+    text-align: center;
+    padding: 20px;
 }
 
 #events h2 {
-    margin-bottom: 20px;                      /* Margin below the heading */
+    margin-bottom: 20px;
 }
 
 .events-container {
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    align-items: center;                      /* Center items vertically */
-    flex-wrap: wrap;                          /* Allow items to wrap */
-    gap: 20px;                                /* Gap between items */
-    width: 90%;                               /* 90% width */
-    margin: 0 auto;                           /* Center the container horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .event {
-    background-color: var(--tile-bg-color);   /* Event background color */
-    color: #004080;                           /* Event text color */
-    flex: 1 1 calc(50% - 20px);               /* Adjust to fit 2 events per row */
-    border-radius: 10px;                      /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    overflow: hidden;                         /* Hide overflow */
-    display: flex;                            /* Use flexbox for layout */
-    flex-direction: column;                   /* Arrange items in a column */
-    justify-content: space-between;           /* Space items evenly */
-    padding: 25px;                            /* Padding inside events */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    background-color: var(--tile-bg-color);
+    color: #004080;
+    flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 tiles per row */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .event h3 {
-    margin: 0 0 10px;                         /* Margin around the heading */
-    text-align: center;                       /* Center the heading */
-    font-size: 1.5em;                         /* Font size for the heading */
-    color: #004080;                           /* Heading color */
+    margin: 0 0 10px;
+    text-align: center; /* Center title */
+    font-size: 1.5em; /* Consistent font size */
+    color: #004080;
 }
 
 .event p {
-    margin: 5px 0;                            /* Margin around the paragraphs */
-    text-align: left;                         /* Left-align the text */
-    font-size: 1em;                           /* Font size for the paragraphs */
-    color: #333;                              /* Paragraph text color */
+    margin: 5px 0;
+    text-align: left; /* Left-align text */
+    font-size: 1em;
+    color: #333;
 }
 
 .event .cta-button {
-    display: inline-flex;                     /* Inline-flex display */
-    align-items: center;                      /* Center items vertically */
-    justify-content: center;                  /* Center items horizontally */
-    padding: 8px 12px;                        /* Padding inside buttons */
-    background-color: var(--cta-bg-color);    /* Button background color */
-    color: #ffffff;                           /* Button text color */
-    text-align: center;                       /* Center text */
-    margin: 10px auto;                        /* Center button horizontally */
-    border-radius: 5px;                       /* Rounded corners */
-    text-decoration: none;                    /* Remove underline from links */
-    font-weight: bold;                        /* Bold text */
-    font-size: 14px;                          /* Font size */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
-    max-width: 90%;                           /* Maximum width for buttons */
-    box-sizing: border-box;                   /* Include padding in the element's total width and height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: var (--cta-bg-color);
+    color: #ffffff;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .event .cta-button i {
-    margin-left: 5px;                         /* Margin to the left of icons */
-    font-size: 14px;                          /* Icon font size */
+    margin-left: 5px;
+    font-size: 14px;
 }
 
 .event .cta-button:hover {
-    background-color: var(--cta-hover-bg-color); /* Hover background color */
+    background-color: var (--cta-hover-bg-color);
 }
 
 .event:hover {
-    transform: translateY(-10px);             /* Move up on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
+
+/* Contact Us Section Styles */
+/* -------------------------------- */
 #contact {
-    text-align: center;                       /* Center the text */
-    padding: 20px;                            /* Padding for the contact section */
+    text-align: center;
+    padding: 20px;
 }
 
 #contact h2 {
-    margin-bottom: 20px;                      /* Margin below the heading */
+    margin-bottom: 20px;
 }
 
 .contact-container {
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    align-items: center;                      /* Center items vertically */
-    background-color: var(--tile-bg-color);   /* Container background color */
-    border-radius: 10px;                      /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    padding: 15px;                            /* Padding inside container */
-    width: 90%;                               /* 90% width */
-    margin: 0 auto;                           /* Center the container horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 60%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .contact-form {
-    display: flex;                            /* Use flexbox for layout */
-    flex-direction: column;                   /* Arrange items in a column */
-    gap: 10px;                                /* Gap between items */
-    max-width: 700px;                         /* Maximum width for the form */
-    margin: 0 auto;                           /* Center the form horizontally */
-    text-align: left;                         /* Left-align text */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .contact-form label {
-    text-align: left;                         /* Left-align labels */
-    font-weight: bold;                        /* Bold text for labels */
+    text-align: left;
+    font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;                            /* Padding inside input and textarea */
-    border: 1px solid #ccc;                   /* Border for input and textarea */
-    border-radius: 5px;                       /* Rounded corners */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #999;                              /* Placeholder text color */
+    color: #999;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--cta-bg-color);        /* Border color on focus */
-    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5); /* Box shadow on focus */
+    border-color: var(--cta-bg-color);
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
 }
 
 .contact-form button {
-    align-self: center;                       /* Center the button */
-    background-color: var(--cta-bg-color);    /* Button background color */
-    color: #fff;                              /* Button text color */
-    border: none;                             /* Remove border */
-    padding: 10px 20px;                       /* Padding inside button */
-    border-radius: 5px;                       /* Rounded corners */
-    cursor: pointer;                          /* Change cursor to pointer on hover */
-    transition: background-color 0.3s;        /* Smooth transition effect */
+    align-self: center;
+    background-color: var(--cta-bg-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: var(--cta-hover-bg-color); /* Hover background color */
-    color: var(--highlight-color);              /* Hover text color */
+    background-color: var(--cta-hover-bg-color);
+    color: var(--highlight-color);
 }
+
+/* Partners Section Styles */
+/* -------------------------------- */
 #partners {
-    text-align: center;                       /* Center the text */
-    padding: 20px;                            /* Padding for the partners section */
+    text-align: center;
+    padding: 20px;
 }
 
 #partners h2 {
-    margin-bottom: 20px;                      /* Margin below the heading */
+    margin-bottom: 20px;
 }
 
 .partners-tile {
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    align-items: center;                      /* Center items vertically */
-    background-color: var(--tile-bg-color);   /* Container background color */
-    border-radius: 10px;                      /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    padding: 25px;                            /* Padding inside container */
-    width: 90%;                               /* 90% width */
-    margin: 0 auto;                           /* Center the container horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 30%; /* Adjusted width to 90% of the screen */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .partner {
-    flex: 1;                                  /* Flex grow */
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    align-items: center;                      /* Center items vertically */
-    margin: 0 10px;                           /* Margin on the sides */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Add some space between the logos */
 }
 
 .partner img {
-    width: 100%;                              /* Full width for images */
-    height: auto;                             /* Maintain aspect ratio */
-    object-fit: contain;                      /* Contain within the given space */
-    max-width: 150px;                         /* Maximum width for images */
-    transition: transform 0.3s, filter 0.3s;  /* Smooth transition effects */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 150px; /* Control the maximum width of the logos */
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .partner img:hover {
-    transform: scale(1.05);                   /* Scale up on hover */
-    filter: brightness(1.2);                  /* Brighten on hover */
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
+/* Footer Styles */
+/* -------------------------------- */
 footer {
-    background-color: var(--header-bg-color); /* Footer background color */
-    color: #ffffff;                           /* Footer text color */
-    text-align: center;                       /* Center the text */
-    padding: 20px 0;                          /* Padding for top and bottom */
-    position: relative;                       /* Position relative */
-    bottom: 0;                                /* Stick to the bottom */
-    width: 100%;                              /* Full width */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    font-size: 14px;                          /* Font size */
+    background-color: var(--header-bg-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 .footer-nav {
-    list-style: none;                         /* Remove default list styling */
-    padding: 0;                               /* Remove padding */
-    margin: 0 0 10px;                         /* Margin below the list */
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    gap: 15px;                                /* Gap between items */
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .footer-nav-item {
-    list-style: none;                         /* Remove default list styling */
+    list-style: none;
 }
 
 .footer-nav-item a {
-    color: #ffffff;                           /* Link color */
-    text-decoration: none;                    /* Remove underline from links */
-    transition: color 0.3s;                   /* Smooth transition effect */
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-nav-item a:hover {
-    color: var(--highlight-color);            /* Hover color */
+    color: var(--highlight-color);
 }
 
 .footer-social-icons {
-    margin-top: 10px;                         /* Margin above the social icons */
-    display: flex;                            /* Use flexbox for layout */
-    justify-content: center;                  /* Center items horizontally */
-    gap: 10px;                                /* Gap between items */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .footer-social-icons a {
-    color: #ffffff;                           /* Icon color */
-    transition: color 0.3s;                   /* Smooth transition effect */
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
 .footer-social-icons a:hover {
-    color: var(--highlight-color);            /* Hover color */
+    color: var(--highlight-color);
 }
 
-.footer-logo img {
-    width: 100px;                             /* Logo width */
-    margin-bottom: 10px;                      /* Margin below the logo */
+/* Content Section Styles */
+/* -------------------------------- */
+.content-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: left;
 }
+
+.questions p, .program-details p {
+    margin: 5px 0;
+}
+
+.question {
+    font-weight: bold;
+    background-color: #e7f3fe;
+    border-left: 4px solid var(--cta-bg-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.question::before {
+    content: 'Q: ';
+    font-weight: bold;
+    color: var(--cta-bg-color);
+}
+
+/* Responsive Design */
+/* -------------------------------- */
+@media (max-width: 1024px) {
+    .tile {
+        flex: 1 1 calc(45% - 20px); /* Adjusted to fit 2 tiles per row on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;              /* Stack navbar items vertically */
+        flex-direction: column;
     }
     .nav-list {
-        flex-direction: column;              /* Stack nav items vertically */
-        width: 100%;                         /* Full width for nav list */
+        flex-direction: column;
+        width: 100%;
     }
     .nav-item {
-        text-align: center;                  /* Center text */
-        width: 100%;                         /* Full width for nav items */
+        text-align: center;
+        width: 100%;
     }
     .dropdown-content {
-        width: 100%;                         /* Full width for dropdown content */
+        width: 100%;
     }
     .dropdown-content a {
-        text-align: center;                  /* Center text in dropdown */
+        text-align: center;
     }
     .hamburger-menu {
-        display: block;                      /* Show hamburger menu */
+        display: block;
     }
     .nav-list {
-        display: none;                       /* Hide nav list by default */
+        display: none;
     }
     .nav-list.active {
-        display: flex;                       /* Show nav list when active */
+        display: flex;
     }
     .hero-section {
-        height: 70vh;                        /* Height of hero section */
+        padding: 60px 10px;
+        height: 60vh;
     }
     .hero-section h1 {
-        font-size: 36px;                     /* Font size for hero heading */
+        font-size: 36px;
     }
     .hero-section p {
-        font-size: 18px;                     /* Font size for hero paragraph */
+        font-size: 18px;
     }
     .tiles-container {
-        flex-direction: column;              /* Stack tiles vertically */
-        align-items: center;                 /* Center tiles */
+        flex-direction: column;
+        align-items: center;
     }
     .tile {
-        width: 100%;                         /* Full width for tiles */
-        margin-bottom: 10px;                 /* Margin below tiles */
+        width: 100%;
+        margin-bottom: 10px;
     }
     .partners-container {
-        flex-direction: column;              /* Stack partners vertically */
+        flex-direction: column;
     }
     .social-icons {
-        justify-content: center;             /* Center social icons */
+        justify-content: center;
     }
     .contact-form {
-        width: 100%;                         /* Full width for contact form */
-        padding: 0 20px;                     /* Padding for contact form */
+        width: 100%;
+        padding: 0 20px;
     }
     .contact-form button {
-        width: 100%;                         /* Full width for contact button */
+        width: 100%;
     }
     .events-container {
-        flex-direction: column;              /* Stack events vertically */
+        flex-direction: column;
     }
     .event {
-        margin: 0 auto;                      /* Center events */
+        margin: 0 auto;
     }
     .banner {
-        font-size: 0.8em;                    /* Font size for banner */
+        font-size: 0.8em;
     }
     .cta-button {
-        width: 80%;                          /* Width for call-to-action buttons */
-        font-size: 14px;                     /* Font size for call-to-action buttons */
-        text-align: center;                  /* Center text */
-        margin: 0 auto;                      /* Center call-to-action buttons */
-        display: block;                      /* Display as block */
+        width: 80%;
+        padding: 10px 0;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
     }
     .tile {
-        max-width: 100%;                     /* Full width for tiles */
+        max-width: 100%;
     }
     .tile .cta-button {
-        width: 100%;                         /* Full width for call-to-action buttons */
+        width: 100%;
     }
     .player-pathway-tile {
-        padding: 15px;                       /* Padding for player pathway tiles */
+        padding: 15px;
     }
     .player-pathway-text {
-        padding: 10px;                       /* Padding for player pathway text */
+        padding: 10px;
     }
     .pathway-stage {
-        flex-direction: column;              /* Stack pathway stages vertically */
-        align-items: center;                 /* Center pathway stages */
+        flex-direction: column;
     }
     .stage-image {
-        max-width: 80%;                      /* Width for stage images */
-        margin: 0 auto 20px;                 /* Margin for stage images */
+        max-width: 80%;
+        margin: 0 auto 20px;
     }
 }
 
+/* Custom Adjustments for Large Screens */
+/* -------------------------------- */
+@media (min-width: 1024px) {
+    .contact-container {
+        width: 60%; /* Set to 60% width on large screens */
+    }
+    .partners-tile {
+        width: 30%; /* Set to 30% width on large screens */
+    }
+}
