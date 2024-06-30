@@ -1,5 +1,4 @@
 /* General Styles */
-/* -------------------------------- */
 :root {
     --main-bg-color: #f4f4f4;
     --main-font-color: #333;
@@ -16,17 +15,21 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     overflow-x: hidden;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Header and Navbar Styles */
-/* -------------------------------- */
 .header {
     background-color: var(--header-bg-color);
     padding: 10px 0;
@@ -166,14 +169,13 @@ body {
 }
 
 /* Hero Section Styles */
-/* -------------------------------- */
 .hero-section {
     background: url('https://i.ibb.co/6HFZbyN/Menu-Picture.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     text-align: center;
     padding: 100px 20px;
-    width: 100%;
+    width: 100vw; /* Set width to 100vw */
     height: 100vh;
     box-sizing: border-box;
     position: relative;
@@ -234,7 +236,6 @@ body {
 }
 
 /* Main Content Styles */
-/* -------------------------------- */
 main {
     padding: 20px;
     padding-bottom: 80px;
@@ -271,7 +272,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Player Pathway Styles */
-/* -------------------------------- */
 .section {
     max-width: 1200px;
     margin: 0 auto;
@@ -346,7 +346,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Join Us Section */
-/* -------------------------------- */
 .join-us-title,
 .join-us-section p {
     font-size: 16px;
@@ -404,9 +403,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     }
 }
 
-
 /* Events Section Styles */
-/* -------------------------------- */
 #events {
     text-align: center;
     padding: 20px;
@@ -488,7 +485,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Contact Us Section Styles */
-/* -------------------------------- */
 #contact {
     text-align: center;
     padding: 20px;
@@ -560,7 +556,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 }
 
 /* Partners Section Styles */
-/* -------------------------------- */
 #partners {
     text-align: center;
     padding: 20px;
@@ -603,7 +598,6 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     filter: brightness(1.2);
 }
 /* Footer Styles */
-/* -------------------------------- */
 footer {
     background-color: var(--header-bg-color);
     color: #ffffff;
@@ -656,7 +650,6 @@ footer {
 }
 
 /* Content Section Styles */
-/* -------------------------------- */
 .content-section {
     padding: 20px;
     background-color: #fff;
@@ -686,7 +679,6 @@ footer {
 }
 
 /* Responsive Design */
-/* -------------------------------- */
 @media (max-width: 1024px) {
     .tile {
         flex: 1 1 calc(45% - 20px); /* Adjusted to fit 2 tiles per row on medium screens */
@@ -790,7 +782,6 @@ footer {
 }
 
 /* Custom Adjustments for Large Screens */
-/* -------------------------------- */
 @media (min-width: 1024px) {
     .contact-container {
         width: 60%; /* Set to 60% width on large screens */
