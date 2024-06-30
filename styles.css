@@ -276,7 +276,7 @@ html.w-mod-touch * {
   color: #fff;
   line-height: inherit;
   cursor: pointer;
-  background-color: #3898ec;
+  background-color: #ff0000;
   border: 0;
   border-radius: 0;
   padding: 9px 15px;
@@ -542,7 +542,7 @@ label {
 }
 
 .w-input:focus, .w-select:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline: 0;
 }
 
@@ -2226,7 +2226,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutemailinput:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2258,7 +2258,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingfullname:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2286,7 +2286,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingstreetaddress:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2314,7 +2314,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingstreetaddressoptional:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2354,7 +2354,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingcity:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2382,7 +2382,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingstateprovince:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2410,7 +2410,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingzippostalcode:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2438,7 +2438,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutshippingcountryselector:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2512,7 +2512,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutcardnumber:focus, .w-commerce-commercecheckoutcardnumber.-wfp-focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2541,7 +2541,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutcardexpirationdate:focus, .w-commerce-commercecheckoutcardexpirationdate.-wfp-focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2570,7 +2570,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutcardsecuritycode:focus, .w-commerce-commercecheckoutcardsecuritycode.-wfp-focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2617,7 +2617,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingfullname:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2645,7 +2645,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingstreetaddress:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2673,7 +2673,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingstreetaddressoptional:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2701,7 +2701,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingcity:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2729,7 +2729,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingstateprovince:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2757,7 +2757,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingzippostalcode:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2785,7 +2785,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-commerce-commercecheckoutbillingcountryselector:focus {
-  border-color: #3898ec;
+  border-color: #ff0000;
   outline-style: none;
 }
 
@@ -2863,7 +2863,7 @@ textarea.w-input, textarea.w-select {
   -ms-appearance: none;
   appearance: none;
   text-align: center;
-  background-color: #3898ec;
+  background-color: #ff0000;
   border-width: 0;
   border-radius: 3px;
   align-items: center;
@@ -2913,16 +2913,16 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
-  background-color: #3898ec;
+  background-color: #ff0000;
   background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border-color: #3898ec;
+  border-color: #ff0000;
 }
 
 .w-checkbox-input--inputType-custom.w--redirected-focus {
-  box-shadow: 0 0 3px 1px #3898ec;
+  box-shadow: 0 0 3px 1px #ff0000;
 }
 
 .w-commerce-commerceorderconfirmationcontainer {
