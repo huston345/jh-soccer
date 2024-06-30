@@ -354,6 +354,24 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
 .cta-button:hover {
     background-color: var(--cta-hover-bg-color);
 }
+
+function togglePhase(phaseId) {
+    const phases = document.querySelectorAll('.tile-content');
+    phases.forEach(phase => phase.classList.remove('active'));
+    const targetPhase = document.getElementById(phaseId);
+    if (targetPhase) {
+        targetPhase.classList.add('active');
+    }
+}
+
+document.querySelectorAll('.tile-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const phaseId = button.getAttribute('onclick').split("'")[1];
+        togglePhase(phaseId);
+    });
+});
+
+
 /* Base Styles for Tile Container */
 .tiles-container {
     display: flex;
