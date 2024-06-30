@@ -519,7 +519,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    width: 60%; /* Adjusted width to 90% of the screen */
+    width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -591,7 +591,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    width: 30%; /* Adjusted width to 90% of the screen */
+    width: 90%; /* Adjusted width to 90% of the screen */
     margin: 0 auto; /* Center the container horizontally */
 }
 
