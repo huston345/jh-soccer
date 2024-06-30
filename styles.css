@@ -235,6 +235,10 @@ body {
     background-color: var(--cta-hover-bg-color);
 }
 
+.hero-section {
+    border: 1px solid red; /* Temporary border for debugging */
+}
+
 /* Main Content Styles */
 main {
     padding: 20px;
