@@ -510,7 +510,7 @@ section h1:not(.no-underline)::after, section h2:not(.no-underline)::after {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: left;
 }
